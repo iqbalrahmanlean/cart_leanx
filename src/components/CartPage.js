@@ -274,7 +274,7 @@ const CartPage = () => {
             {/* Continue Shopping Link */}
             <div className="mt-4 text-center">
               <Link 
-                to="/healthcare" 
+                to="/" 
                 className="text-cyan-800 hover:text-cyan-900 text-sm underline"
               >
                 Continue Shopping

@@ -8,6 +8,39 @@ const Header = () => {
     const { t, i18n } = useTranslation();
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const [currentCurrency, setCurrentCurrency] = useState('');
+    const [cartCount, setCartCount] = useState(0);
+
+    // Function to get cart items
+    const getCartItems = () => {
+        try {
+            const items = localStorage.getItem('cartItems');
+            return items ? JSON.parse(items) : [];
+        } catch (error) {
+            console.error('Error loading cart items:', error);
+            return [];
+        }
+    };
+
+    useEffect(() => {
+        // Load cart count
+        const updateCartCount = () => {
+            const items = getCartItems();
+            setCartCount(items.length);
+        };
+
+        updateCartCount();
+
+        // Listen for cart updates
+        const handleCartUpdate = () => {
+            updateCartCount();
+        };
+
+        window.addEventListener('cartUpdated', handleCartUpdate);
+
+        return () => {
+            window.removeEventListener('cartUpdated', handleCartUpdate);
+        };
+    }, []);
 
     useEffect(() => {
         // Load saved currency from localStorage
@@ -102,12 +135,33 @@ const Header = () => {
                             <span className="text-sm capitalize mobile:hidden">{getCurrentLanguageDisplay()}</span>
                             <span className="text-sm capitalize text-gray-500">{getCurrencyDisplay()}</span>
                         </div>
-                        <a className="flex items-center space-x-2" href="/cart">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-5 w-5">
-                                <path fillRule="evenodd" d="M6 5v1H4.667a1.75 1.75 0 0 0-1.743 1.598l-.826 9.5A1.75 1.75 0 0 0 3.84 19H16.16a1.75 1.75 0 0 0 1.743-1.902l-.826-9.5A1.75 1.75 0 0 0 15.333 6H14V5a4 4 0 0 0-8 0Zm4-2.5A2.5 2.5 0 0 0 7.5 5v1h5V5A2.5 2.5 0 0 0 10 2.5ZM7.5 10a2.5 2.5 0 0 0 5 0V8.75a.75.75 0 0 1 1.5 0V10a4 4 0 0 1-8 0V8.75a.75.75 0 0 1 1.5 0V10Z" clipRule="evenodd"></path>
-                            </svg>
+                        
+                        {/* Cart Icon with Badge */}
+                        <Link to="/cart" className="flex items-center space-x-2">
+                            <div className="relative inline-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-5 w-5">
+                                    <path fillRule="evenodd" d="M6 5v1H4.667a1.75 1.75 0 0 0-1.743 1.598l-.826 9.5A1.75 1.75 0 0 0 3.84 19H16.16a1.75 1.75 0 0 0 1.743-1.902l-.826-9.5A1.75 1.75 0 0 0 15.333 6H14V5a4 4 0 0 0-8 0Zm4-2.5A2.5 2.5 0 0 0 7.5 5v1h5V5A2.5 2.5 0 0 0 10 2.5ZM7.5 10a2.5 2.5 0 0 0 5 0V8.75a.75.75 0 0 1 1.5 0V10a4 4 0 0 1-8 0V8.75a.75.75 0 0 1 1.5 0V10Z" clipRule="evenodd"></path>
+                                </svg>
+                                
+                                {/* Small Cart Badge */}
+                                {cartCount > 0 && (
+                                    <span 
+                                        className="absolute inline-flex items-center justify-center w-4 h-4 font-medium text-white bg-red-600 rounded-full"
+                                        style={{
+                                            top: '-9px',
+                                            right: '-4px',
+                                            fontSize: '10px',
+                                            justifyContent: 'center',
+                                            marginLeft: '19px',
+                                            textAlign: 'center'
+                                        }}
+                                    >
+                                        {cartCount > 9 ? '9+' : cartCount}
+                                    </span>
+                                )}
+                            </div>
                             <span className="text-sm">¥ 0</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -119,5 +173,6 @@ const Header = () => {
         </header>
     );
 };
+
 
 export default Header;
