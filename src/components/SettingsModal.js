@@ -46,17 +46,18 @@ const SettingsModal = ({ isOpen, onClose }) => {
     { value: 'South Korea', label: t('south_korea') }
   ];
 
+  // Fixed: Use native language names instead of translated ones
   const languages = [
-    { value: 'Japanese', label: t('japanese'), code: 'ja' },
-    { value: 'English', label: t('english'), code: 'en' },
-    { value: 'Korean', label: t('korean'), code: 'ko' }
+    { value: 'Japanese', label: '日本語', nativeLabel: '日本語', code: 'ja' },
+    { value: 'English', label: 'English', nativeLabel: 'English', code: 'en' },
+    { value: 'Korean', label: '한국어', nativeLabel: '한국어', code: 'ko' }
   ];
 
   const currencies = [
-    { value: 'USD ($)', label: t('usd') },
-    { value: 'JPY (¥)', label: t('jpy') },
-    { value: 'EUR (€)', label: t('eur') },
-    { value: 'KRW (₩)', label: t('krw') }
+    { value: 'USD ($)', label: 'USD ($)' },
+    { value: 'JPY (¥)', label: 'JPY (¥)' },
+    { value: 'EUR (€)', label: 'EUR (€)' },
+    { value: 'KRW (₩)', label: 'KRW (₩)' }
   ];
 
   const handleLanguageSelect = (languageValue) => {
@@ -198,6 +199,7 @@ const SettingsModal = ({ isOpen, onClose }) => {
             <p className="text-body2">{t('region_note')}</p>
           </div>
 
+          {/* Fixed Language Dropdown - Show native language names */}
           <Dropdown
             label={t('language')}
             selectedValue={languages.find(l => l.value === selectedLanguage)?.label || selectedLanguage}

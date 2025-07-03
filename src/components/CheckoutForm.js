@@ -303,7 +303,7 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
         </form>
 
         {/* Security Notice */}
-        <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+        <div className="p-5 mt-4 p-3 bg-blue-50 rounded-lg">
           <div className="flex items-center text-sm text-blue-800">
             <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd"></path>
