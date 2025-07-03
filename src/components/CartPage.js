@@ -185,7 +185,7 @@ const CartPage = () => {
             {cartItems.length === 0 ? (
             <div className="rounded-lg border p-[27px] text-center text-gray-600">
                 <svg className="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 48 48">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 118 0v4M8 21l4-4v4a4 4 0 008 0v-4l4 4v10a2 2 0 01-2 2H10a2 2 0 01-2-2V21z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 118 0v4M8 21l4-4v4a4 4 0 008 0v-4l4 4v10a2 2 0 01-2-2V21z" />
                 </svg>
                 <h3 className="text-lg font-medium mb-2">Your cart is empty</h3>
                 <p className="text-gray-500 mb-4">Browse our reports and add items to your cart.</p>
@@ -204,8 +204,28 @@ const CartPage = () => {
                   : convertedPrice.toFixed(2);
 
                 return (
-                  <div key={item.cartId} className="rounded-lg border p-6 bg-white shadow-sm">
-                    <div className="flex justify-between items-start">
+                  <div key={item.cartId} className="relative rounded-lg border p-6 bg-white shadow-sm">
+                    {/* Remove Icon - Top Right Corner */}
+                    <button 
+                      className="absolute p-1 text-white hover:bg-red-600 rounded-full transition-colors"
+                      onClick={() => handleRemoveItem(item.cartId, item.title)}
+                      title="Remove item"
+                      style={{
+                        top: '-4px',
+                        right: '-4px',
+                        fontSize: '10px',
+                        justifyContent: 'center',
+                        marginLeft: '19px',
+                        textAlign: 'center',
+                        background: 'red'
+                      }}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+
+                    <div className="flex justify-between items-start pr-8">
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                         <div className="text-gray-600 text-sm mb-2">
@@ -221,12 +241,6 @@ const CartPage = () => {
                         <p className="text-xl font-bold mb-2">
                           {currencySymbol}{formattedPrice}
                         </p>
-                        <button 
-                          className="text-red-500 text-sm hover:text-red-700 underline"
-                          onClick={() => handleRemoveItem(item.cartId, item.title)}
-                        >
-                          Remove
-                        </button>
                       </div>
                     </div>
                   </div>

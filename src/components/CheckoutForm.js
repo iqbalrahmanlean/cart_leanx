@@ -166,7 +166,7 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
               name="fullName"
               value={formData.fullName}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
               placeholder="Enter your full name"
               disabled={isProcessing}
               required
@@ -183,7 +183,7 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
               placeholder="Enter your email"
               disabled={isProcessing}
               required
@@ -203,7 +203,7 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
               placeholder="e.g., 0123456789"
               disabled={isProcessing}
               required

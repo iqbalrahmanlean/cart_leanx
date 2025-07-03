@@ -43,6 +43,7 @@ const resources = {
       
       // Brands Section
       "trusted_by_brands": "Trusted by Leading Global Brands",
+      "from" : "From",
       
       // Categories Section
       "market_research_categories": "Market Research by Category",

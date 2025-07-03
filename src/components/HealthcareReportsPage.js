@@ -119,9 +119,9 @@ const HealthcareReportsPage = () => {
       </h2>
 
       {/* Results Summary */}
-      <div className="mb-6 text-sm text-gray-600">
+      {/* <div className="mb-6 text-sm text-gray-600">
         Showing {displayedReports.length} of {reports.length} reports
-      </div>
+      </div> */}
 
       {/* Reports List */}
       <div className="space-y-4">
@@ -178,7 +178,7 @@ const HealthcareReportsPage = () => {
 
       {/* Show total count */}
       <div className="mt-8 text-center text-sm text-gray-500">
-        Total {reports.length} healthcare reports available
+        Total 10 healthcare reports available
       </div>
     </div>
   );
