@@ -196,97 +196,80 @@ const ReportDetailPage = () => {
 
   // Toast Component (remove this since we're using react-hot-toast)
 
-  return (
-    <div className="max-w-7xl px-6 py-8 mx-auto">
-      {/* Toast Container */}
-      <Toaster />
+return (
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Toaster />
 
-      <div className="grid grid-cols-3 gap-8">
-        {/* Main Content - Left Side */}
-        <div className="col-span-2">
-          {/* Title */}
-          <h1 className="mb-6 text-2xl font-bold text-gray-900">{report.title}</h1>
-          
-          {/* Report Meta Info */}
-          <div className="mb-8 flex items-center space-x-6 text-sm text-gray-600">
-            <span>{report.type}</span>
-            <span>{t('published_date')}: {report.date}</span>
-            <span>{t('pages')}: {report.pages || 'N/A'}</span>
-            <span>ID: {report.id}</span>
-          </div>
+    <div className="report-layout">
+      {/* Left Content */}
+      <div className="report-content">
+        <h1 className="mb-6 text-2xl font-bold text-gray-900">{report.title}</h1>
+        <div className="mb-8 flex flex-wrap gap-4 text-sm text-gray-600">
+          <span>{report.type}</span>
+          <span>{t('published_date')}: {report.date}</span>
+          <span>{t('pages')}: {report.pages || 'N/A'}</span>
+          <span>ID: {report.id}</span>
+        </div>
+        <h2 className="mb-6 text-2xl font-bold text-gray-900">{report.title}</h2>
+        <div className="space-y-4 text-gray-700 leading-relaxed">
+          <p>{report.summary}</p>
+          {report.content?.map((paragraph, index) => (
+            <p key={index} className="mb-4">{paragraph}</p>
+          ))}
+        </div>
+      </div>
 
-          {/* Report Title Again (as in original) */}
-          <h2 className="mb-6 text-2xl font-bold text-gray-900">{report.title}</h2>
+      {/* Right Sidebar */}
+      <div className="report-sidebar">
+        <h3 className="mb-6 text-xl font-bold text-gray-900">{t('buying_option')}</h3>
 
-          {/* Report Content */}
-          <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>{report.summary}</p>
-            
-            {report.content && report.content.map((paragraph, index) => (
-              <p key={index} className="mb-4">
-                {paragraph}
-              </p>
-            ))}
-          </div>
+        <div className="space-y-4 mb-6">
+          {report.licenseOptions?.map((option, index) => (
+            <label
+              key={index}
+              className="flex items-center justify-between rounded-lg border p-4 cursor-pointer hover:bg-gray-50"
+            >
+              <div className="flex items-center space-x-3">
+                <input
+                  type="radio"
+                  className="h-4 w-4 text-blue-600"
+                  name="license"
+                  value={option.license}
+                  checked={selectedLicense === option.license}
+                  onChange={(e) => setSelectedLicense(e.target.value)}
+                />
+                <span className="text-sm text-gray-900">{option.license}</span>
+              </div>
+              <span className="text-sm font-medium text-gray-900">
+                {getCurrencySymbol(currentCurrency)} {convertPrice(option.price.USD, currentCurrency)}
+              </span>
+            </label>
+          ))}
         </div>
 
-        {/* Right Sidebar - Purchase Options */}
-        <div className="col-span-1 border p-6">
-          <div className="bg-white">
-            <h3 className="mb-6 text-xl font-bold text-gray-900">{t('buying_option')}</h3>
-            
-            {/* License Options */}
-            <div className="space-y-4 mb-6">
-              {report.licenseOptions && report.licenseOptions.map((option, index) => (
-                <label 
-                  key={index}
-                  className="flex items-center justify-between rounded-lg border p-4 cursor-pointer hover:bg-gray-50"
-                >
-                  <div className="flex items-center space-x-3">
-                    <input
-                      type="radio"
-                      className="h-4 w-4 text-blue-600"
-                      name="license"
-                      value={option.license}
-                      checked={selectedLicense === option.license}
-                      onChange={(e) => setSelectedLicense(e.target.value)}
-                    />
-                    <span className="text-sm text-gray-900">
-                      {option.license}
-                    </span>
-                  </div>
-                  <span className="text-sm font-medium text-gray-900">
-                    {getCurrencySymbol(currentCurrency)} {convertPrice(option.price.USD, currentCurrency)}
-                  </span>
-                </label>
-              ))}
-            </div>
+        <div className="mb-4">
+          <button
+            onClick={handleAddToCart}
+            className="w-full border flex justify-center items-center gap-1.5 py-2.5 px-5 text-base leading-6 h-12 text-center rounded transition-colors duration-150 ease-out text-gray-700 hover:bg-gray-200"
+          >
+            {t('add_to_cart')}
+          </button>
+        </div>
 
-            {/* Add to Cart Button */}
-            <div className="mb-4">
-              <button 
-                onClick={handleAddToCart}
-                className="flex justify-center items-center gap-1.5 py-2.5 px-5 text-base leading-6 h-12 text-center rounded transition-colors duration-150 ease-out disabled:cursor-not-allowed disabled:opacity-20 disabled:bg-gray-500 disabled:text-white text-gray-700 hover:bg-gray-200 w-full border"
-              >
-                {t('add_to_cart')}
-              </button>
-            </div>
-
-            {/* Buy Now Button */}
-            <div>
-              <button 
-                onClick={handleBuyNow}
-                className="flex justify-center items-center gap-1.5 py-2.5 px-5 text-base leading-6 h-12 text-center rounded transition-colors duration-150 ease-out disabled:cursor-not-allowed disabled:opacity-20 disabled:bg-gray-500 disabled:text-white bg-cyan-800 text-white hover:bg-cyan-900 w-full"
-              >
-                {t('buy_now')}
-                
-              </button>
-            </div>
-          </div>
+        <div>
+          <button
+            onClick={handleBuyNow}
+            className="w-full bg-cyan-800 text-white hover:bg-cyan-900 flex justify-center items-center gap-1.5 py-2.5 px-5 text-base leading-6 h-12 text-center rounded transition-colors duration-150 ease-out"
+          >
+            {t('buy_now')}
+          </button>
         </div>
       </div>
     </div>
-  );
+  </div>
+);
+
+
 };
 
 export default ReportDetailPage;

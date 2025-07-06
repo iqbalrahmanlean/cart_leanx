@@ -2169,3 +2169,27 @@ input {
   .mobile\:px-0 { padding-left: 0; padding-right: 0; }
   .mobile\:pt-4 { padding-top: 1rem; }
 }
+
+
+/* Mobile default: stacked */
+.report-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Desktop: side-by-side */
+@media (min-width: 1024px) {
+  .report-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .report-content {
+    width: 66.6666%;
+  }
+
+  .report-sidebar {
+    width: 33.3333%;
+  }
+}
