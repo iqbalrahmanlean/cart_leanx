@@ -178,17 +178,17 @@ const Header = () => {
         <header className="border-b">
             <div className="mx-auto max-w-7xl px-6 mobile:p-5">
                 <div className="flex h-16 items-center justify-between mobile:h-full">
-                    <div className="flex items-center space-x-2 mobile:flex-col mobile:space-x-0">
-                        <Link to="/">
-                            <img src="/twopip.svg" alt="logo" className="h-6 w-6 rounded-full cursor-pointer" />
-                        </Link>
-                        <h1 className="cursor-pointer text-lg font-semibold mobile:max-w-20">
-                            {t('twopip_research')}
-                        </h1>
-                        <a className="text-sm text-gray-500 mobile:hidden" href="/jp-JP">
-                            {t('global_marketplace')}
-                        </a>
-                    </div>
+                    <div className="flex items-center space-x-2 mobile:space-x-1">
+    <Link to="/">
+        <img src="/twopip.svg" alt="logo" className="h-6 w-6 rounded-full cursor-pointer mobile:h-5 mobile:w-5" />
+    </Link>
+    <h1 className="cursor-pointer text-lg font-semibold mobile:text-sm mobile:truncate mobile:max-w-20">
+        {t('twopip_research')}
+    </h1>
+    <a className="text-sm text-gray-500 mobile:text-xs mobile:hidden" href="/jp-JP">
+        {t('global_marketplace')}
+    </a>
+</div>
                     <div className="flex items-center space-x-6 mobile:gap-3 mobile:space-x-0">
                         <div
                             className="flex cursor-pointer items-center space-x-2 mobile:flex-col mobile:space-x-1"
