@@ -286,12 +286,12 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
             </div>
 
             {/* Security Notice */}
-            <div className="p-3 bg-blue-50 rounded-lg">
+            <div className="p-5 bg-blue-50 rounded-lg">
               <div className="flex items-center text-sm text-blue-800">
                 <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd"></path>
                 </svg>
-                Secure payment powered by LeanPay Malaysia
+                Secure payment powered by Lean.x Malaysia
               </div>
               <div className="text-xs text-blue-600 mt-1">
                 Your payment information is encrypted and secure.
@@ -317,7 +317,7 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
                 Creating Payment Page...
               </>
             ) : (
-              `Pay RM ${myrAmount.toFixed(2)} with LeanPay`
+              `Pay RM ${myrAmount.toFixed(2)} with Lean.x`
             )}
           </button>
         </div>
