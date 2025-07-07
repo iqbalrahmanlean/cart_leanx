@@ -183,10 +183,8 @@ const CartPage = () => {
                     {/* Cart Items Section */}
                     <div className="space-y-4">
                         {cartItems.length === 0 ? (
-                            <div className="rounded-lg border p-[27px] text-center text-gray-600">
-                                <svg className="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 48 48">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 118 0v4M8 21l4-4v4a4 4 0 008 0v-4l4 4v10a2 2 0 01-2-2V21z" />
-                                </svg>
+                            <div className="p-5 rounded-lg border p-[27px] text-center text-gray-600">
+                               
                                 <h3 className="text-lg font-medium mb-2">Your cart is empty</h3>
                                 <p className="text-gray-500 mb-4">Browse our reports and add items to your cart.</p>
                                 <Link
