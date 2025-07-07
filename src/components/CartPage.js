@@ -188,7 +188,7 @@ const CartPage = () => {
                                 <h3 className="text-lg font-medium mb-2">Your cart is empty</h3>
                                 <p className="text-gray-500 mb-4">Browse our reports and add items to your cart.</p>
                                 <Link
-                                    to="/healthcare"
+                                    to="/"
                                     className="inline-flex items-center px-4 py-2 bg-cyan-800 text-white rounded-lg hover:bg-cyan-900 transition-colors"
                                 >
                                     Browse Reports

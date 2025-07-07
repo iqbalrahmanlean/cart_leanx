@@ -59,6 +59,8 @@ const resources = {
     "full_name": "Full Name",
       "email_address": "Email Address",
       "phone_number":"Phone Number", 
+      "add_to_cart" : "Add to cart",
+      "buy_now" : "Buy now",
 
       
       // Reports Section
