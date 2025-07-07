@@ -140,9 +140,10 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
   const myrAmount = calculateMYRAmount();
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
-        <div className="flex items-center justify-between mb-6">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex">
+      <div className="m-auto bg-white rounded-lg w-full max-w-md max-h-[90vh] flex flex-col mx-4 checkout-form">
+        {/* Fixed Header */}
+        <div className="flex items-center justify-between p-6 border-b border-gray-200 flex-shrink-0">
           <h3 className="text-xl font-bold">Checkout Details</h3>
           <button 
             onClick={onClose}
@@ -155,136 +156,155 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Full Name */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              {t('full_name')}*
-            </label>
-            <input
-              type="text"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
-              placeholder="Enter your full name"
-              disabled={isProcessing}
-              required
-            />
-          </div>
+        {/* Scrollable Content */}
+        <div className="flex-1 overflow-y-auto px-6 py-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Full Name */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                {t('full_name')}*
+              </label>
+              <input
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
+                placeholder="Enter your full name"
+                disabled={isProcessing}
+                required
+              />
+            </div>
 
-          {/* Email */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Email Address *
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
-              placeholder="Enter your email"
-              disabled={isProcessing}
-              required
-            />
-            <p className="text-xs text-gray-500 mt-1">
-              Your purchase receipt will be sent to this email
-            </p>
-          </div>
+            {/* Email */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Email Address *
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
+                placeholder="Enter your email"
+                disabled={isProcessing}
+                required
+              />
+              <p className="text-xs text-gray-500 mt-1">
+                Your purchase receipt will be sent to this email
+              </p>
+            </div>
 
-          {/* Phone Number */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Phone Number *
-            </label>
-            <input
-              type="tel"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
-              placeholder="e.g., 0123456789"
-              disabled={isProcessing}
-              required
-            />
-            <p className="text-xs text-gray-500 mt-1">
-              Malaysian phone number format (e.g., 0123456789)
-            </p>
-          </div>
+            {/* Phone Number */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Phone Number *
+              </label>
+              <input
+                type="tel"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
+                placeholder="e.g., 0123456789"
+                disabled={isProcessing}
+                required
+              />
+              <p className="text-xs text-gray-500 mt-1">
+                Malaysian phone number format (e.g., 0123456789)
+              </p>
+            </div>
 
-          {/* Order Summary */}
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="font-medium text-gray-900 mb-2">Order Summary</h4>
-            <div className="space-y-1 text-sm text-gray-600">
-              <div className="flex justify-between">
-                <span>Items:</span>
-                <span>{cartItems.length}</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Subtotal ({currency}):</span>
-                <span>{formatAmount(totalAmount, currency)}</span>
-              </div>
-              <div className="border-t pt-1 mt-2">
-                <div className="flex justify-between font-medium text-gray-900">
-                  <span>Total (MYR):</span>
-                  <span>RM {myrAmount.toFixed(2)}</span>
+            {/* Order Summary */}
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h4 className="font-medium text-gray-900 mb-2">Order Summary</h4>
+              <div className="space-y-1 text-sm text-gray-600">
+                <div className="flex justify-between">
+                  <span>Items:</span>
+                  <span>{cartItems.length}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Subtotal ({currency}):</span>
+                  <span>{formatAmount(totalAmount, currency)}</span>
+                </div>
+                <div className="border-t pt-1 mt-2">
+                  <div className="flex justify-between font-medium text-gray-900">
+                    <span>Total (MYR):</span>
+                    <span>RM {myrAmount.toFixed(2)}</span>
+                  </div>
+                </div>
+                <div className="text-xs text-gray-500 mt-2">
+                  * Payment will be processed in Malaysian Ringgit (MYR)
                 </div>
               </div>
-              <div className="text-xs text-gray-500 mt-2">
-                * Payment will be processed in Malaysian Ringgit (MYR)
+            </div>
+
+            {/* Items List */}
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h4 className="font-medium text-gray-900 mb-2">Items in Order</h4>
+              <div className="space-y-2 max-h-32 overflow-y-auto">
+                {cartItems.map((item, index) => (
+                  <div key={item.cartId} className="text-sm">
+                    <div className="font-medium text-gray-900">{item.title}</div>
+                    <div className="text-gray-600">{item.license} - {item.type}</div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
 
-          {/* Items List */}
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="font-medium text-gray-900 mb-2">Items in Order</h4>
-            <div className="space-y-2">
-              {cartItems.map((item, index) => (
-                <div key={item.cartId} className="text-sm">
-                  <div className="font-medium text-gray-900">{item.title}</div>
-                  <div className="text-gray-600">{item.license} - {item.type}</div>
-                </div>
-              ))}
+            {/* Terms and Conditions */}
+            <div className="flex items-start space-x-2">
+              <input
+                type="checkbox"
+                name="agreeTerms"
+                checked={formData.agreeTerms}
+                onChange={handleInputChange}
+                className="h-4 w-4 text-cyan-600 rounded focus:ring-cyan-500 mt-0.5 flex-shrink-0"
+                disabled={isProcessing}
+                required
+              />
+              <label className="text-sm text-gray-600">
+                I agree to the{' '}
+                <button 
+                  type="button" 
+                  className="text-cyan-600 hover:underline"
+                  onClick={() => alert('Terms and Conditions page would open here')}
+                >
+                  Terms and Conditions
+                </button>
+                {' '}and{' '}
+                <button 
+                  type="button" 
+                  className="text-cyan-600 hover:underline"
+                  onClick={() => alert('Privacy Policy page would open here')}
+                >
+                  Privacy Policy
+                </button>
+                , and authorize the processing of my payment via LeanPay.
+              </label>
             </div>
-          </div>
 
-          {/* Terms and Conditions */}
-          <div className="flex items-start space-x-2">
-            <input
-              type="checkbox"
-              name="agreeTerms"
-              checked={formData.agreeTerms}
-              onChange={handleInputChange}
-              className="h-4 w-4 text-cyan-600 rounded focus:ring-cyan-500 mt-0.5"
-              disabled={isProcessing}
-              required
-            />
-            <label className="text-sm text-gray-600">
-              I agree to the{' '}
-              <button 
-                type="button" 
-                className="text-cyan-600 hover:underline"
-                onClick={() => alert('Terms and Conditions page would open here')}
-              >
-                Terms and Conditions
-              </button>
-              {' '}and{' '}
-              <button 
-                type="button" 
-                className="text-cyan-600 hover:underline"
-                onClick={() => alert('Privacy Policy page would open here')}
-              >
-                Privacy Policy
-              </button>
-              , and authorize the processing of my payment via LeanPay.
-            </label>
-          </div>
+            {/* Security Notice */}
+            <div className="p-3 bg-blue-50 rounded-lg">
+              <div className="flex items-center text-sm text-blue-800">
+                <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd"></path>
+                </svg>
+                Secure payment powered by LeanPay Malaysia
+              </div>
+              <div className="text-xs text-blue-600 mt-1">
+                Your payment information is encrypted and secure.
+              </div>
+            </div>
+          </form>
+        </div>
 
-          {/* Submit Button */}
+        {/* Fixed Footer with Submit Button */}
+        <div className="p-6 border-t border-gray-200 flex-shrink-0">
           <button
             type="submit"
+            onClick={handleSubmit}
             disabled={isProcessing || cartItems.length === 0}
             className="w-full bg-cyan-800 text-white py-3 px-4 rounded-lg hover:bg-cyan-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
           >
@@ -300,19 +320,6 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
               `Pay RM ${myrAmount.toFixed(2)} with LeanPay`
             )}
           </button>
-        </form>
-
-        {/* Security Notice */}
-        <div className="p-5 mt-4 p-3 bg-blue-50 rounded-lg">
-          <div className="flex items-center text-sm text-blue-800">
-            <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd"></path>
-            </svg>
-            Secure payment powered by LeanPay Malaysia
-          </div>
-          <div className="text-xs text-blue-600 mt-1">
-            Your payment information is encrypted and secure.
-          </div>
         </div>
       </div>
     </div>

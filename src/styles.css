@@ -2200,3 +2200,6 @@ input {
     display: none;
   }
 }
+.checkout-form{
+    margin: 20px auto 20px auto !important;
+}
