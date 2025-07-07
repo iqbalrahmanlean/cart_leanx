@@ -137,7 +137,7 @@ const CartPage = () => {
             <main className="max-w-7xl px-6 py-8 mx-auto">
                 {/* Progress Steps */}
                 <div className="mx-auto px-4 pb-12 pt-8 mobile:px-0 mobile:pt-4">
-                    <div className="flex items-center justify-between mobile:flex-col mobile:items-baseline mobile:gap-3">
+                    <div className="flex flex-row items-center justify-between mobile:flex-row mobile:items-center mobile:gap-3">
                         {/* Step 1 - Shopping Cart (Active) */}
                         <div className="flex items-center">
                             <div className="flex h-8 w-8 items-center justify-center rounded-full text-white bg-cyan-800">

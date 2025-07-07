@@ -1,11 +1,12 @@
+// src/components/Navigation.js
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const { t } = useTranslation();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { href: "/report/healthcare", key: "healthcare" },
@@ -19,24 +20,46 @@ const Navigation = () => {
 
   return (
     <nav className="bg-cyan-800 text-white">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex items-center justify-between py-3">
-          {/* Logo or Site Name */}
-          <div className="text-lg font-semibold">Menu</div>
-
-          {/* Hamburger Icon */}
-          <div className="lg:hidden">
-            <button onClick={() => setMenuOpen(!menuOpen)}>
-              {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+      {/* === Mobile Only === */}
+      <div className="block md:hidden">
+        <div className="mx-auto max-w-7xl px-6 py-3">
+          <div className="flex justify-between items-center">
+            <div className="text-lg font-semibold">Navigation</div>
+            <button 
+              onClick={() => setIsOpen(!isOpen)} 
+              className="text-white focus:outline-none hover:bg-cyan-700 p-2 rounded-md transition-colors duration-200"
+              aria-label="Toggle navigation menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
+          
+          {/* Mobile Menu */}
+          {isOpen && (
+            <div className="flex flex-col mt-3 space-y-1 bg-cyan-900 rounded-lg p-2">
+              {navItems.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.href}
+                  className="text-white hover:bg-cyan-700 px-3 py-2 rounded-md transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t(item.key)}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex gap-4">
+      {/* === Desktop (md and lg) - Your Original Code === */}
+      <div className="hidden md:block">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex justify-between py-3 overflow-x-auto">
             {navItems.map((item, index) => (
-              <Link
+              <Link 
                 key={index}
-                className="hover:underline whitespace-nowrap px-2"
+                className="hover:underline whitespace-nowrap px-2" 
                 to={item.href}
               >
                 {t(item.key)}
@@ -44,22 +67,6 @@ const Navigation = () => {
             ))}
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="flex flex-col lg:hidden space-y-2 pb-3">
-            {navItems.map((item, index) => (
-              <Link
-                key={index}
-                className="hover:underline px-2"
-                to={item.href}
-                onClick={() => setMenuOpen(false)} // Close menu on link click
-              >
-                {t(item.key)}
-              </Link>
-            ))}
-          </div>
-        )}
       </div>
     </nav>
   );
