@@ -16,19 +16,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 70 }
+        "price": {
+          "USD": 70
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 73 }
+        "price": {
+          "USD": 73
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 75 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 75
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 90 }
+        "price": {
+          "USD": 90
+        }
       }
     ]
   },
@@ -49,19 +57,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 2800 }
+        "price": {
+          "USD": 2800
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 2850 }
+        "price": {
+          "USD": 2850
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 3000 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 3000
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 3500 }
+        "price": {
+          "USD": 3500
+        }
       }
     ]
   },
@@ -82,19 +98,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 700 }
+        "price": {
+          "USD": 700
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 720 }
+        "price": {
+          "USD": 720
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 750 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 750
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 850 }
+        "price": {
+          "USD": 850
+        }
       }
     ]
   },
@@ -115,19 +139,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 350 }
+        "price": {
+          "USD": 350
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 365 }
+        "price": {
+          "USD": 365
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 380 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 380
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 420 }
+        "price": {
+          "USD": 420
+        }
       }
     ]
   },
@@ -148,19 +180,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 3500 }
+        "price": {
+          "USD": 3500
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 3600 }
+        "price": {
+          "USD": 3600
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 3800 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 3800
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 4200 }
+        "price": {
+          "USD": 4200
+        }
       }
     ]
   },
@@ -181,19 +221,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 70 }
+        "price": {
+          "USD": 70
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 73 }
+        "price": {
+          "USD": 73
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 75 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 75
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 90 }
+        "price": {
+          "USD": 90
+        }
       }
     ]
   },
@@ -214,19 +262,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 85 }
+        "price": {
+          "USD": 85
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 88 }
+        "price": {
+          "USD": 88
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 90 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 90
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 105 }
+        "price": {
+          "USD": 105
+        }
       }
     ]
   },
@@ -247,19 +303,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 75 }
+        "price": {
+          "USD": 75
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 78 }
+        "price": {
+          "USD": 78
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 80 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 80
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 92 }
+        "price": {
+          "USD": 92
+        }
       }
     ]
   },
@@ -280,19 +344,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 78 }
+        "price": {
+          "USD": 78
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 81 }
+        "price": {
+          "USD": 81
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 83 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 83
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 95 }
+        "price": {
+          "USD": 95
+        }
       }
     ]
   },
@@ -313,19 +385,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 70 }
+        "price": {
+          "USD": 70
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 73 }
+        "price": {
+          "USD": 73
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 75 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 75
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 90 }
+        "price": {
+          "USD": 90
+        }
       }
     ]
   },
@@ -346,19 +426,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 67 }
+        "price": {
+          "USD": 67
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 70 }
+        "price": {
+          "USD": 70
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 72 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 72
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 85 }
+        "price": {
+          "USD": 85
+        }
       }
     ]
   },
@@ -379,19 +467,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 490 }
+        "price": {
+          "USD": 490
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 510 }
+        "price": {
+          "USD": 510
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 530 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 530
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 610 }
+        "price": {
+          "USD": 610
+        }
       }
     ]
   },
@@ -412,19 +508,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 56 }
+        "price": {
+          "USD": 56
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 59 }
+        "price": {
+          "USD": 59
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 61 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 61
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 70 }
+        "price": {
+          "USD": 70
+        }
       }
     ]
   },
@@ -445,19 +549,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 63 }
+        "price": {
+          "USD": 63
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 66 }
+        "price": {
+          "USD": 66
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 68 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 68
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 78 }
+        "price": {
+          "USD": 78
+        }
       }
     ]
   },
@@ -478,19 +590,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 65 }
+        "price": {
+          "USD": 65
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 68 }
+        "price": {
+          "USD": 68
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 70 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 70
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 81 }
+        "price": {
+          "USD": 81
+        }
       }
     ]
   },
@@ -511,19 +631,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 119 }
+        "price": {
+          "USD": 119
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 124 }
+        "price": {
+          "USD": 124
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 128 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 128
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 148 }
+        "price": {
+          "USD": 148
+        }
       }
     ]
   },
@@ -544,19 +672,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 140 }
+        "price": {
+          "USD": 140
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 146 }
+        "price": {
+          "USD": 146
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 150 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 150
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 175 }
+        "price": {
+          "USD": 175
+        }
       }
     ]
   },
@@ -577,19 +713,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 69 }
+        "price": {
+          "USD": 69
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 72 }
+        "price": {
+          "USD": 72
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 74 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 74
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 85 }
+        "price": {
+          "USD": 85
+        }
       }
     ]
   },
@@ -610,19 +754,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 560 }
+        "price": {
+          "USD": 560
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 583 }
+        "price": {
+          "USD": 583
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 600 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 600
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 700 }
+        "price": {
+          "USD": 700
+        }
       }
     ]
   },
@@ -643,19 +795,27 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 595 }
+        "price": {
+          "USD": 595
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 620 }
+        "price": {
+          "USD": 620
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 638 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 638
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 743 }
+        "price": {
+          "USD": 743
+        }
       }
     ]
   },
@@ -676,20 +836,903 @@
     "licenseOptions": [
       {
         "license": "Single User License PDF And Excel",
-        "price": { "USD": 70 }
+        "price": {
+          "USD": 70
+        }
       },
       {
         "license": "Hard Copy",
-        "price": { "USD": 73 }
+        "price": {
+          "USD": 73
+        }
       },
       {
-        "license": "Site License PDF And Excel", 
-        "price": { "USD": 75 }
+        "license": "Site License PDF And Excel",
+        "price": {
+          "USD": 75
+        }
       },
       {
         "license": "Enterprise License PDF And Excel",
-        "price": { "USD": 90 }
+        "price": {
+          "USD": 90
+        }
+      }
+    ]
+  },
+  {
+    "id": "5860451",
+    "title": "Middle East & Africa Pharmaceuticals Market, By Country, Competition, Forecast and Opportunities, 2020-2030F",
+    "date": "January 2025",
+    "type": "Report",
+    "pages": 133,
+    "category": "healthcare",
+    "summary": "The Middle East & Africa Pharmaceuticals Market was valued at USD 30.07 Billion in 2024, and is expected to reach USD 42.42 Billion by 2030, rising at a CAGR of 6.10%. The market is primarily driven by the region's growing population, increasing prevalence of chronic diseases, and rising healthcare expenditure.",
+    "content": [
+      "The Middle East & Africa Pharmaceuticals Market is primarily driven by several factors including the region's growing population, increasing prevalence of chronic diseases, and rising healthcare expenditure. As the population continues to expand, there is a higher demand for pharmaceutical products to meet healthcare needs.",
+      "Cardiovascular disease (CVD) has emerged as the leading cause of death in the Middle East and North Africa (MENA), responsible for over a third of all fatalities, with more than 1.4 million deaths annually. In Africa, chronic diseases account for over 15 million deaths annually between the ages of 30 and 69.",
+      "According to an Alpen Capital report, the region is home to over 742 hospitals with more than 106,693 beds, with an estimated 161 healthcare projects in the GCC alone, valued at approximately USD 53.2 billion. Healthcare spending in the UAE is projected to reach USD 26 billion by 2028.",
+      "Based on Drug Type, Generic Drugs emerged as the fastest growing segment due to their cost-effectiveness and affordability. Based on Product Type, prescription drugs emerged as the dominating segment in 2024. Saudi Arabia emerged as the dominating country in the Middle East & Africa Pharmaceuticals market in 2024.",
+      "Key market challenges include counterfeit medicines and drug quality concerns, as well as intellectual property rights and patent protection issues. The market is also benefiting from expanding access to healthcare services and growing medical tourism investments in the region."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF, Excel And Online Access",
+        "price": {
+          "USD": 2145,
+          "JPY": 306500,
+          "EUR": 1823,
+          "KRW": 2831400
+        }
+      },
+      {
+        "type": "Enterprise License PDF, Excel And Online Access",
+        "price": {
+          "USD": 2289,
+          "JPY": 327000,
+          "EUR": 1946,
+          "KRW": 3020280
+        }
+      }
+    ]
+  },
+  {
+    "id": "5716464",
+    "title": "Pharmaceutical Glycerine Market by Utility, Source - Global Forecast 2025-2030",
+    "date": "October 2024",
+    "type": "Report",
+    "pages": 191,
+    "category": "pharmaceuticals",
+    "summary": "The Pharmaceutical Glycerine Market grew from USD 37.47 million in 2023 to USD 39.40 million in 2024. It is expected to continue growing at a CAGR of 5.94%, reaching USD 56.13 million by 2030. Pharmaceutical glycerine is a high-purity form of glycerine used in medicine, primarily as a solvent, humectant, and preservative in drug formulations.",
+    "content": [
+      "Pharmaceutical glycerine is a high-purity form of glycerine used in medicine, primarily as a solvent, humectant, and preservative in drug formulations. Its necessity arises from its role in ensuring stability and effectiveness in medicines by improving solubility and moisture retention.",
+      "The application of pharmaceutical glycerine spans across tablets, syrups, ointments, and as a base in topical creams, making its end-use scope broad and critical in the pharmaceutical industry. The market's growth is influenced by increasing demand for pharmaceutical products, focus on innovative drug delivery systems, and growing awareness of the benefits of glycerine in medical formulations.",
+      "Market drivers include growing usage as excipients in pharmaceutical preparations, rising adoption of natural ingredients, and increasing application in the treatment of eye pressure conditions. The market faces challenges from adverse effects of pharmaceutical glycerine and availability of low-cost substitutes.",
+      "The pharmaceutical glycerine market is of oligopolistic nature, characterized by a few dominant players who influence pricing and distribution networks. Key companies include Archer Daniels Midland Company, Emery Oleochemicals Group, Fisher Scientific Co. L.L.C., GJ Chemical, Godrej Group, Merck KGaA, and others.",
+      "Market segmentation covers utility (Care Products, Excipient) and source (Animal, Plant) across major regions including Americas, Asia-Pacific, and Europe, Middle East & Africa. The report provides comprehensive analysis using Porter's Five Forces, PESTLE analysis, and FPNV Positioning Matrix frameworks."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF, Excel And Online Access",
+        "price": {
+          "USD": 84,
+          "JPY": 12000,
+          "EUR": 71,
+          "KRW": 110880
+        }
+      },
+      {
+        "type": "Enterprise License PDF, Excel And Online Access",
+        "price": {
+          "USD": 91,
+          "JPY": 13000,
+          "EUR": 77,
+          "KRW": 120120
+        }
+      }
+    ]
+  },
+  {
+    "id": "5887813",
+    "title": "Autologous Cell Therapies Market by Source, Indication, End-User - Global Forecast 2025-2030",
+    "date": "October 2024",
+    "type": "Report",
+    "pages": 192,
+    "category": "pharmaceuticals",
+    "summary": "The Autologous Cell Therapies Market grew from USD 8.11 billion in 2023 to USD 9.24 billion in 2024. It is expected to continue growing at a CAGR of 14.52%, reaching USD 20.96 billion by 2030. Autologous cell therapies involve harvesting and re-administering a patient's own cells to repair or replace damaged tissues, offering personalized treatment options across oncology, cardiology, neurology, and autoimmune disorders.",
+    "content": [
+      "Autologous cell therapies involve harvesting and re-administering a patient's own cells to repair or replace damaged tissues, offering personalized treatment options across oncology, cardiology, neurology, and autoimmune disorders. The necessity for these therapies emerges from their potential to minimize immune rejection, enhance efficacy, and provide opportunities for personalizing treatment based on individual genetic profiles.",
+      "The application is broad, spanning regenerative medicine, tissue engineering, and cell-based immunotherapies, with end-use largely concentrated in hospitals and biotechnology centers. Market growth is fueled by advancements in biotechnology, increased incidences of chronic diseases, and the burgeoning demand for personalized medicine.",
+      "Market drivers include rise in incidences of chronic diseases worldwide, expanding focus on drug development for new applications, and growing need for personalized medicines with improving healthcare infrastructure. The market faces challenges from high costs associated with autologous cell therapy and problems with long turnaround time and limited shelf life.",
+      "Key market segments include sources (Bone Marrow, Chondrocytes, Epidermis, Haematopoietic Stem Cells, Mesenchymal Stem Cells), indications (Autoimmune Disorders, Cancer, Cardiovascular Disorders, Neurodegenerative Disorders, Orthopedics, Wound Healing), and end-users (Academics & Research Institutes, Ambulatory Surgical Centers, Hospitals & Clinics).",
+      "Leading companies include Abata Therapeutics, Achilles Therapeutics plc, Adaptimmune Therapeutics PLC, Bristol-Myers Squibb Company, Fate Therapeutics Inc., and others. Innovation areas ripe for exploration include improving cryopreservation techniques, enhancing the scalability of cell production, and reducing manufacturing complexities."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF, Excel And Online Access",
+        "price": {
+          "USD": 84,
+          "JPY": 12000,
+          "EUR": 71,
+          "KRW": 110880
+        }
+      },
+      {
+        "type": "Enterprise License PDF, Excel And Online Access",
+        "price": {
+          "USD": 91,
+          "JPY": 13000,
+          "EUR": 77,
+          "KRW": 120120
+        }
+      }
+    ]
+  },
+  {
+    "id": "6012655",
+    "title": "Pharmaceutical Commercialization Solutions and Services Industry, Global, 2024-2029",
+    "date": "September 2024",
+    "type": "Report",
+    "pages": null,
+    "category": "pharmaceuticals",
+    "summary": "Transformative Precision and Programmatic Marketing Approaches Backed by SaaS-based Service Platforms Drive Pharmaceutical Commercialization. With the growing preference for a patient-centric care delivery approach, the pharma industry follows a robust step-by-step approach towards market commercialization, with a clear understanding of the market stakeholders, segments, as well as post-launch forecasts to create seamless go-to-market strategies.",
+    "content": [
+      "The pharmaceutical industry is adopting patient-centric care delivery approaches with robust market commercialization strategies. Companies are collaborating with third-party logistics and adopting adaptive supply chain strategies, such as dual sourcing, stockpiling, and advanced scenario planning, while tapping into established distribution partners' capabilities.",
+      "Marketing and sales strategies are designed to allow pharma companies to navigate stakeholders, regulatory bodies, end users, and technology vendors. Pharma marketing creates positive image and confidence amongst HCPs for drug adoption using scientific data, testimonials, and scientific evidence.",
+      "Companies must adopt a step-by-step approach toward commercial market access, involving everything from identifying the target market based on product value proposition to understanding changes in end-user perspective and making necessary alterations to maintain competitive edge.",
+      "Automation and the use of AI, ML, and cloud solutions will be instrumental in upscaling pharma commercial operations. These tools use predictive analytics for market segmentation, content personalization, lead identification and scoring, and subsequent market access, ensuring better product uptake and revenue.",
+      "The analysis covers market opportunities in HEOR solutions, tailormade/precision omnichannel marketing strategies, and integrated drug pricing for payers and PBMs, categorizing forecasts by service model and agreement type. Industry cross-collaborations will improve commercialization success rates."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Site License PDF",
+        "price": {
+          "USD": 112,
+          "JPY": 16000,
+          "EUR": 95,
+          "KRW": 147840
+        }
+      },
+      {
+        "type": "Site License PDF And Hard Copy",
+        "price": {
+          "USD": 118,
+          "JPY": 16900,
+          "EUR": 101,
+          "KRW": 156720
+        }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": {
+          "USD": 119,
+          "JPY": 17000,
+          "EUR": 101,
+          "KRW": 157080
+        }
+      },
+      {
+        "type": "Enterprise License PDF And Hard Copy",
+        "price": {
+          "USD": 126,
+          "JPY": 18000,
+          "EUR": 107,
+          "KRW": 166320
+        }
+      }
+    ]
+  },
+  {
+    "id": "2907761",
+    "title": "Collaboration Deals in Pharmaceuticals 2019-2024",
+    "date": "September 2024",
+    "type": "Report",
+    "pages": 1150,
+    "category": "pharmaceuticals",
+    "summary": "Collaboration Deals in Pharmaceuticals provides a detailed understanding and analysis of how and why companies enter collaboration deals. Fully revised and updated, the report provides details of collaboration deals from 2019 to 2024, including financial terms where available, plus links to online copies of actual collaboration contract documents.",
+    "content": [
+      "The report provides access to collaboration deal payment terms as announced between the parties, offering useful insight into payment and other deal terms. Understanding the flexibility of a prospective partner's negotiated deals terms provides critical insight into the negotiation process and what can be expected during term negotiations.",
+      "This comprehensive report contains a listing of collaboration deals announced since 2019 as recorded in the Current Agreements deals and alliances database, including financial terms where available, plus links to online copies of actual collaboration contract documents submitted to the Securities Exchange Commission.",
+      "The report covers trending analysis of collaboration dealmaking, deal structure overview, leading collaboration deals by headline value, and comprehensive listings of the top 25 most active collaboration dealmaker companies. Each deal provides access to full deal records and actual contract documents where available.",
+      "Key benefits include understanding deal trends since 2019, benchmarking analysis to identify market value of transactions, access to financial terms (upfront, milestone, royalties), directory of deals by company A-Z, therapy focus and technology type, and insights into deal structures through contract document access.",
+      "The report enables due diligence assessment of deal terms including rights granted, exclusivity provisions, payment structures, intellectual property handling, commercialization responsibilities, development and manufacturing obligations, confidentiality management, dispute resolution, and termination conditions."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": {
+          "USD": 105,
+          "JPY": 15000,
+          "EUR": 89,
+          "KRW": 138600
+        }
+      },
+      {
+        "type": "1 - 5 User License PDF",
+        "price": {
+          "USD": 109,
+          "JPY": 15600,
+          "EUR": 93,
+          "KRW": 144720
+        }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": {
+          "USD": 110,
+          "JPY": 15658,
+          "EUR": 93,
+          "KRW": 145200
+        }
+      }
+    ]
+  },
+  {
+    "id": "6012655",
+    "title": "Pharmaceutical Commercialization Solutions and Services Industry, Global, 2024-2029",
+    "date": "September 2024",
+    "type": "Report",
+    "pages": null,
+    "category": "pharmaceuticals",
+    "summary": "Transformative Precision and Programmatic Marketing Approaches Backed by SaaS-based Service Platforms Drive Pharmaceutical Commercialization. With the growing preference for a patient-centric care delivery approach, the pharma industry follows a robust step-by-step approach towards market commercialization, with a clear understanding of the market stakeholders, segments, as well as post-launch forecasts to create seamless go-to-market strategies.",
+    "content": [
+      "The pharmaceutical industry is adopting patient-centric care delivery approaches with robust market commercialization strategies. Companies are collaborating with third-party logistics and adopting adaptive supply chain strategies, such as dual sourcing, stockpiling, and advanced scenario planning, while tapping into established distribution partners' capabilities.",
+      "Marketing and sales strategies are designed to allow pharma companies to navigate stakeholders, regulatory bodies, end users, and technology vendors. Pharma marketing creates positive image and confidence amongst HCPs for drug adoption using scientific data, testimonials, and scientific evidence.",
+      "Companies must adopt a step-by-step approach toward commercial market access, involving everything from identifying the target market based on product value proposition to understanding changes in end-user perspective and making necessary alterations to maintain competitive edge.",
+      "Automation and the use of AI, ML, and cloud solutions will be instrumental in upscaling pharma commercial operations. These tools use predictive analytics for market segmentation, content personalization, lead identification and scoring, and subsequent market access, ensuring better product uptake and revenue.",
+      "The analysis covers market opportunities in HEOR solutions, tailormade/precision omnichannel marketing strategies, and integrated drug pricing for payers and PBMs, categorizing forecasts by service model and agreement type. Industry cross-collaborations will improve commercialization success rates."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Site License PDF",
+        "price": {
+          "USD": 112,
+          "JPY": 16000,
+          "EUR": 95,
+          "KRW": 147840
+        }
+      },
+      {
+        "type": "Site License PDF And Hard Copy",
+        "price": {
+          "USD": 118,
+          "JPY": 16900,
+          "EUR": 101,
+          "KRW": 156720
+        }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": {
+          "USD": 119,
+          "JPY": 17000,
+          "EUR": 101,
+          "KRW": 157080
+        }
+      },
+      {
+        "type": "Enterprise License PDF And Hard Copy",
+        "price": {
+          "USD": 126,
+          "JPY": 18000,
+          "EUR": 107,
+          "KRW": 166320
+        }
+      }
+    ]
+  },
+  
+  {
+    "id": "5860451",
+    "title": "Growth Opportunities in Virtual Simulation and Modeling Technologies for Chemicals and Materials R&D, 2024 - 2029",
+    "date": "February 2025",
+    "type": "Report",
+    "pages": null,
+    "category": "chemicals",
+    "summary": "Virtual simulation and modeling technologies are transforming chemicals and materials research and development (R&D) by enabling precise design, testing, and optimization of materials and processes. These technologies facilitate the modeling of complex chemical reactions, allow for accurate predictions of material properties, and make production processes more efficient while curtailing the need for costly and time-consuming physical experiments.",
+    "content": [
+      "Virtual simulation and modeling technologies are transforming chemicals and materials R&D by enabling precise design, testing, and optimization of materials and processes, facilitating modeling of complex chemical reactions and accurate predictions of material properties.",
+      "These technologies make production processes more efficient while curtailing the need for costly and time-consuming physical experiments, focusing on innovations that enable sustainability, efficiency, and cost-effectiveness.",
+      "The report examines latest advancements in simulation and modeling, including artificial intelligence (AI) and machine learning (ML), and explores applications across automotive, aerospace, pharmaceuticals, and construction sectors.",
+      "It provides comprehensive analysis of critical challenges in chemicals and materials R&D that can be mitigated through virtual simulation and modeling technologies, highlighting the broader ecosystem of key players, academic contributions, patent landscapes, and investment activities.",
+      "The report identifies factors boosting and restraining the industry and potential growth opportunities arising from this space for market players and stakeholders to leverage in their development and adoption strategies."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Site License PDF",
+        "price": { "JPY": 410000 }
+      },
+      {
+        "type": "Site License PDF And Hard Copy",
+        "price": { "JPY": 440000 }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": { "JPY": 460000 }
+      },
+      {
+        "type": "Enterprise License PDF And Hard Copy",
+        "price": { "JPY": 357700 }
+      }
+    ]
+  },
+  {
+    "id": "5645019",
+    "title": "Wire and Cable Report Ed 6 2024",
+    "date": "September 2024",
+    "type": "Report",
+    "pages": 232,
+    "category": "industrial",
+    "summary": "This report surveys the metallic wire and cable market, sizing and forecasting demand for insulated power cable, bare power conductors, metallic communications cable and low voltage cable used in utility networks and industry, auto and OEM producers.",
+    "content": [
+      "The report sizes and forecasts the market for metallic electricity and communications cable and conductors, specifically for insulated power cable, bare power conductors, metallic communications cable, building wire, winding or magnet wire, auto wire and harnesses and LV energy cable.",
+      "Comprehensive analysis covers data analysed by twelve cable and conductor categories, classified by type, application and material - copper, aluminium and steel, with market analysis across 37 countries and 7 regions from 2023 to 2028.",
+      "Each country and region is analysed by production imports, exports and demand, with comprehensive outline of 34 leading cable companies, ranking of companies in each market, and global market shares of top 50 companies.",
+      "The report includes outlines of three subsea sectors (interconnectors, offshore wind and OGP), country analysis of underground cable penetration, technical descriptions of conductor and cable types, applications, and insulation technology.",
+      "Special focus areas include superconductor industry commercialization, railway electrification penetration, cable markets and technology, with PDF report containing market statistics and Excel database providing expanded statistical analysis of tonnage and value demand."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": { "JPY": 85000 }
+      },
+      {
+        "type": "Single User License PDF And Excel",
+        "price": { "JPY": 92000 }
+      },
+      {
+        "type": "1 - 20 User License PDF",
+        "price": { "JPY": 94000 }
+      },
+      {
+        "type": "1 - 20 User License PDF And Excel",
+        "price": { "JPY": 95000 }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": { "JPY": 97000 }
+      },
+      {
+        "type": "Enterprise License PDF And Excel",
+        "price": { "JPY": 100000 }
+      }
+    ]
+  },
+  {
+  "id": "5412114",
+  "title": "The Global Market for Advanced Carbon Materials 2025-2035",
+  "date": "October 2024",
+  "type": "Report",
+  "pages": 1031,
+  "category": "chemicals-materials",
+  "summary": "The advanced carbon materials market encompasses diverse products including carbon fibers, graphene, carbon nanotubes, nanodiamonds, and specialized carbon forms like biochar and activated carbon. These materials demonstrate exceptional mechanical, electrical, and thermal properties that make them increasingly vital across multiple industries, from aerospace and automotive to electronics and environmental applications.",
+  "content": [
+    "The advanced carbon materials market encompasses diverse products including carbon fibers, graphene, carbon nanotubes, nanodiamonds, and specialized carbon forms, demonstrating exceptional mechanical, electrical, and thermal properties vital across aerospace, automotive, electronics, and environmental applications.",
+    "Market growth is driven by increasing demand for lightweight, high-strength materials in transportation and aerospace sectors, coupled with rising adoption in renewable energy applications and battery technologies, while sustainability regulations accelerate bio-based carbon materials development.",
+    "The report provides comprehensive analysis of 15 different advanced carbon material types with detailed market forecasts from 2024-2035, including in-depth company profiles of over 900 manufacturers, product developers and producers, and analysis of manufacturing processes and technologies.",
+    "Key focus areas include electric vehicle battery materials, renewable energy applications, aerospace and defense, environmental remediation, energy storage solutions, construction and infrastructure, electronics and semiconductors, and healthcare and medical devices.",
+    "Major growth drivers include increasing demand for lightweight materials, growing sustainability focus, rising electric vehicle adoption, renewable energy infrastructure expansion, electronics advancements, new medical applications development, and environmental regulations for carbon reduction initiatives."
+  ],
+  "licenseOptions": [
+    {
+      "type": "Single User License PDF",
+      "price": {
+        "USD": 42,
+        "JPY": 6000,
+        "EUR": 36,
+        "KRW": 55440
+      }
+    },
+    {
+      "type": "Single User License PDF And Hard Copy",
+      "price": {
+        "USD": 44,
+        "JPY": 6300,
+        "EUR": 37,
+        "KRW": 58170
+      }
+    }
+  ]
+},
+
+  {
+    "id": "6031294",
+    "title": "Warehouse Autonomous Mobile Robots (AMR) Market, Edition 2024",
+    "date": "December 2024",
+    "type": "Report",
+    "pages": 70,
+    "category": "automation",
+    "summary": "The adoption of Autonomous Mobile Robots (AMRs) in the warehousing industry is rapidly transforming logistics and supply chain operations globally. As companies increasingly seek to enhance efficiency and reduce costs, AMRs are becoming integral to modern warehouse management. The global autonomous mobile robots' sales witnessed a growth of 56 percent in 2022 with AMR sales expected to grow by over 60 percent to 25 thousand units by end of 2024.",
+    "content": [
+      "The global autonomous mobile robots market witnessed 56% growth in 2022 with sales increasing by 44,767 units from 2021, and AMR sales are expected to grow by over 60% to 25 thousand units by end of 2024, driven by pent-up demand and economic recovery.",
+      "Key demand drivers include e-commerce growth necessitating efficient warehousing solutions, ongoing labor shortages leading to automation adoption, and operational efficiency improvements in speed, accuracy, and safety that AMRs provide to optimize workflows.",
+      "The increasing adoption of Industry 4.0, smart factory trends, and connected logistics are propelling AMR adoption in warehouses, with key industries driving demand including e-commerce, manufacturing, logistics and warehousing focused on customer satisfaction.",
+      "Geographically, demand is dominated by China followed by the U.S., with Asian countries holding the largest market share. The ASEAN market is expected to grow at 30% CAGR from 2023 to 2030 to reach 67 thousand units by 2030.",
+      "Leading market players include Geek+, Amazon Robotics, Fetch Robotics, GreyOrange, and Locus Robotics, with the industry being highly competitive and companies continuously investing in R&D while forming strategic partnerships to expand market presence."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": {
+          "USD": 35,
+          "JPY": 5000,
+          "EUR": 30,
+          "KRW": 46200
+        }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": {
+          "USD": 42,
+          "JPY": 6000,
+          "EUR": 36,
+          "KRW": 55440
+        }
+      }
+    ]
+  },
+  {
+    "id": "6026715",
+    "title": "Aerospace Testing Market by Material Testing, Environmental Testing, Structural/Component Testing, Avionics/Flight & Electronics Testing, Propulsion System Testing, in-House, Commercial, Military & Defence, Space Exploration - Global Forecast to 2029",
+    "date": "November 2024",
+    "type": "Report",
+    "pages": 271,
+    "category": "aerospace",
+    "summary": "The global aerospace testing market was valued at USD 5.29 billion in 2024 and is projected to reach USD 6.68 billion by 2029, expected to register a CAGR of 4.8% during the forecast period. Key factors driving the market include stringent safety and regulatory standards, technological advancements and the growing global fleet of production and defence aircraft.",
+    "content": [
+      "The global aerospace testing market was valued at USD 5.29 billion in 2024 and is projected to reach USD 6.68 billion by 2029 with a CAGR of 4.8%, driven by stringent safety standards, technological advancements, and growing aircraft fleet production.",
+      "The in-house sourcing segment is expected to have significant market share as it provides aerospace manufacturers with control, customization, and confidentiality in testing processes, enabling protection of proprietary technology and sensitive data critical in defense and aerospace industries.",
+      "Environmental testing services are expected to record significant growth rates as aerospace components must withstand extreme temperatures, high altitudes, humidity, and vibration, with testing needed to validate new materials and sustainable aviation technologies.",
+      "Europe is likely to grow at significant CAGR during the forecast period due to increasing investments in aerospace innovation, defense, and commercial aviation, with France, Germany, and UK as leading manufacturing hubs requiring advanced testing services.",
+      "The market is dominated by established players including Element Materials Technology, SGS SA, Intertek Group, Applus+, TÜV SÜD, Boeing, Airbus, and Lockheed Martin, with strict regulatory standards from FAA and EASA driving demand for rigorous testing and quality checks."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": {
+          "USD": 210,
+          "JPY": 30000,
+          "EUR": 180,
+          "KRW": 277200
+        }
+      },
+      {
+        "type": "1 - 5 User License PDF",
+        "price": {
+          "USD": 224,
+          "JPY": 32000,
+          "EUR": 192,
+          "KRW": 295680
+        }
+      },
+      {
+        "type": "Site License PDF",
+        "price": {
+          "USD": 231,
+          "JPY": 33000,
+          "EUR": 198,
+          "KRW": 304920
+        }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": {
+          "USD": 238,
+          "JPY": 34000,
+          "EUR": 204,
+          "KRW": 314160
+        }
+      }
+    ]
+  },
+  {
+    "id": "4745670",
+    "title": "Industrial Automation and Wireless IoT - 5th Edition",
+    "date": "September 2024",
+    "type": "Report",
+    "pages": 200,
+    "category": "automation",
+    "summary": "The installed base of wireless devices in industrial automation reached 56.5 million in 2023 and is forecasted to grow at a compound annual growth rate of 14.3% from 56.5 million units at the end of 2023 to 110.3 million units by 2028. This study investigates the worldwide market for wireless IoT applications in industrial automation with comprehensive analysis of the value chain and key applications.",
+    "content": [
+      "The installed base of active wireless IoT devices in industrial automation is forecasted to grow at 14.3% CAGR from 56.5 million units in 2023 to 110.3 million units by 2028, with annual shipments expected to reach 19.1 million units in 2028.",
+      "Wireless technologies are integrated into automation equipment including industrial sensors, wireless I/O and field devices, as well as network equipment such as access points, gateways, routers and switches, with annual shipments reaching 10.7 million units in 2023.",
+      "Standardized wireless technologies such as WiFi, IEEE 802.15.4 and Bluetooth have become leading technologies for industrial applications, while emerging 5G technologies broaden the addressable market for deployments requiring high bandwidth, low latency or high capacity.",
+      "Major wireless instrumentation vendors include Emerson (with over 10 million wireless pressure transmitters installed), Yokogawa, Honeywell, ABB, Endress+Hauser, Hitachi, OMRON, Schneider Electric, and Siemens providing comprehensive wireless field device solutions.",
+      "The adoption of wireless solutions is often gradual with initial deployments comprising clusters of wireless devices connected to existing wired networks, widely used as wire replacements in hard-to-reach areas, hazardous locations, moving machine parts, and portable equipment."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF And Excel",
+        "price": {
+          "USD": 35,
+          "JPY": 5000,
+          "EUR": 30,
+          "KRW": 46200
+        }
+      },
+      {
+        "type": "1 - 10 User License PDF And Excel",
+        "price": {
+          "USD": 36,
+          "JPY": 5200,
+          "EUR": 31,
+          "KRW": 48048
+        }
+      },
+      {
+        "type": "Enterprise License PDF And Excel",
+        "price": {
+          "USD": 37,
+          "JPY": 5300,
+          "EUR": 32,
+          "KRW": 48972
+        }
+      }
+    ]
+  },
+
+  
+  {
+    "id": "5178194",
+    "title": "Global LPG Market Analysis Plant Capacity, Location, Production, Operating Efficiency, Demand & Supply, End Use, Regional Demand, Sales Channel, Foreign Trade, Manufacturing Process, Industry Market Size, 2015-2035",
+    "date": "October 2024",
+    "type": "Report",
+    "pages": null,
+    "category": "energy",
+    "summary": "The global Liquified Petroleum Gas (LPG) market has reached approximately 320 million tonnes in 2022 and is expected to grow at a CAGR of 3.40% during the forecast period until 2035, reaching approximately 491 million tonnes. LPG serves as a clean, efficient energy source with the domestic sector accounting for approximately 44% of global consumption in 2022, driven by increased urban population growth and growing environmental awareness.",
+    "content": [
+      "The global LPG market reached approximately 320 million tonnes in 2022 and is expected to grow at 3.40% CAGR until 2035 to reach 491 million tonnes, driven by increased urban population growth, improved R&D activities, and growing environmental awareness positioning LPG as a clean alternative energy source.",
+      "The domestic sector dominates LPG consumption with approximately 44% market share in 2022, utilizing LPG for cooking, heating, and hot water systems, while the transport industry also holds prominent shares as LPG serves as a clean substitute for gasoline and diesel.",
+      "Asia Pacific leads both consumption and production with nearly 40% market share in 2022, expected to remain the biggest consumer, with LPG competing against conventional fuels like wood, charcoal, and coal in developing nations for cooking and heating applications.",
+      "Major production players include IRPC Refinery (Thailand), ExxonMobil, Indian Oil Corporation Limited, JXTG Nippon Oil & Energy, GASCO, Reliance Petroleum Limited, Bharat Petroleum Corporation Limited, and Saudi Aramco, with IRPC Refinery leading as the top producer.",
+      "Market segmentation covers domestic, industry, transport, refinery, chemical, and other sectors, with direct and indirect sales channels across North America, Europe, Asia Pacific, Middle East and Africa, and South America regions, supported by comprehensive demand-supply analysis from 2015-2035."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License Online Access - 1 Year",
+        "price": {
+          "USD": 420,
+          "JPY": 60000,
+          "EUR": 360,
+          "KRW": 554400
+        }
+      },
+      {
+        "type": "Enterprise License Online Access - 1 Year",
+        "price": {
+          "USD": 434,
+          "JPY": 62000,
+          "EUR": 372,
+          "KRW": 572880
+        }
+      }
+    ]
+  },
+  {
+    "id": "5544420",
+    "title": "Data Center Generator Market Landscape 2024-2029",
+    "date": "September 2024",
+    "type": "Report",
+    "pages": 236,
+    "category": "technology",
+    "summary": "The Data Center Generator Market was valued at USD 6 billion in 2023, and is expected to reach USD 10.84 billion by 2029, rising at a CAGR of 10.36%. Data center operators are increasingly investing in infrastructure automation solutions, microgrid systems, and alternative fuel sources such as HVO, natural gas, hydrogen fuel cells, and eco-diesel to minimize carbon footprint and improve resilience.",
+    "content": [
+      "The data center generator market was valued at USD 6 billion in 2023 and is expected to reach USD 10.84 billion by 2029 at 10.36% CAGR, driven by growing concerns over outages, increased downtime, and investments in infrastructure automation solutions and AI-driven DCIM systems.",
+      "Data centers are increasingly adopting alternative fuel sources including HVO (Hydrotreated Vegetable Oil), natural gas, hydrogen fuel cells, and eco-diesel to minimize carbon footprint, with companies like Compass Datacenters investing in HVO-fueled generators across facilities.",
+      "Market segmentation includes system capacity (0-1.5 MW, 1.5-3 MW, >=3 MW), system types (DRUPS, diesel/gas/bi-fuel generators, HVO fuel, fuel cells), and tier standards (Tier I & II, Tier III, Tier IV) with comprehensive geographical coverage.",
+      "North America leads the market with significant developments like Microsoft's hydrogen fuel-cell testing in Wyoming, while Asia-Pacific shows robust growth driven by digital transformation, 5G rollout, and companies like Samsung exploring hydrogen fuel cells for carbon emission reduction.",
+      "Key generator providers include ABB, Caterpillar, Cummins, Generac Power Systems, HITEC Power Protection, KOHLER, Rolls-Royce, and Yanmar, with data centers increasingly shifting towards renewable energy integration and grid collaboration to reduce fossil fuel dependency."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": {
+          "USD": 140,
+          "JPY": 20000,
+          "EUR": 120,
+          "KRW": 184800
+        }
+      },
+      {
+        "type": "1 - 5 User License PDF",
+        "price": {
+          "USD": 146,
+          "JPY": 20800,
+          "EUR": 125,
+          "KRW": 192192
+        }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": {
+          "USD": 175,
+          "JPY": 25000,
+          "EUR": 150,
+          "KRW": 231000
+        }
+      }
+    ]
+  },
+  {
+    "id": "6023229",
+    "title": "The Connected Mining Solutions Market - 2nd Edition",
+    "date": "November 2024",
+    "type": "Report",
+    "pages": 190,
+    "category": "mining",
+    "summary": "The total installed base of connected mining solutions reached close to 1.3 million units worldwide across equipment, people and environment segments in 2023. Growing at a CAGR of 16.1%, the installed base is forecasted to reach roughly 2.7 million units by 2028, with Asia-Pacific accounting for the largest share followed by North America, Middle East & Africa, Latin America and Europe.",
+    "content": [
+      "The total installed base of connected mining solutions reached 1.3 million units worldwide in 2023 across equipment, people and environment segments, with equipment segment accounting for the largest share including OEM telematics systems and advanced connected solutions from mining technology specialists.",
+      "The market is forecasted to grow at 16.1% CAGR to reach approximately 2.7 million units by 2028, with Asia-Pacific estimated to account for the largest share, followed by North America, Middle East & Africa, Latin America and Europe.",
+      "Top players include equipment manufacturers like Epiroc, Sandvik, Komatsu, and Hitachi Construction Machinery who have expanded offerings through M&A activity, with surface mining dominated by Modular Mining Systems, Hexagon Mining, Wenco International, and Caterpillar's MineStar suite.",
+      "The underground segment is less mature and more fragmented with key providers including Newtrax Technologies (Sandvik), Mining TAG (Epiroc), Mine Site Technologies (Komatsu), Roobuck, and Strata Worldwide, while companies like MICROMINE and GroundHog Apps serve both segments.",
+      "Connected solutions span equipment monitoring on machines and vehicles, people safety and productivity solutions for mining personnel, and environmental monitoring sensors for mine operations, with comprehensive analysis of surface and underground mining techniques and connectivity technologies."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": {
+          "USD": 42,
+          "JPY": 6000,
+          "EUR": 36,
+          "KRW": 55440
+        }
+      },
+      {
+        "type": "1 - 10 User License PDF",
+        "price": {
+          "USD": 46,
+          "JPY": 6500,
+          "EUR": 39,
+          "KRW": 60060
+        }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": {
+          "USD": 48,
+          "JPY": 6800,
+          "EUR": 41,
+          "KRW": 62832
+        }
+      }
+    ]
+  },
+  {
+    "id": "6051359",
+    "title": "United States Out-of-home Food and Beverage Market, By Region, Competition, Forecast & Opportunities, 2020-2030F",
+    "date": "February 2025",
+    "type": "Report",
+    "pages": 82,
+    "category": "food-beverage",
+    "summary": "The United States Out-of-home Food and Beverage Market was valued at USD 71.30 Billion in 2024, and is expected to reach USD 167.21 Billion by 2030, rising at a CAGR of 15.32%. As the U.S. economy continues to recover and disposable income rises, consumers are increasingly spending on dining out and food delivery, with 43% preferring dining out and 57% preferring ordering food online.",
+    "content": [
+      "The U.S. out-of-home food and beverage market was valued at USD 71.30 billion in 2024 and is expected to reach USD 167.21 billion by 2030 at 15.32% CAGR, driven by economic recovery, rising disposable income, and consumer preference for dining out and food delivery services.",
+      "Quick Service Restaurants (QSRs) dominate the market segment due to convenience, affordability, and consistent demand, with major chains like McDonald's, Taco Bell, and Wendy's benefiting from high foot traffic and adaptation to healthier menu options including plant-based and low-calorie meals.",
+      "Key market drivers include convenience-focused busy lifestyles driving demand for quick-service options, diverse consumer preferences toward innovative and personalized dining experiences, and growing health and wellness consciousness leading to demand for nutritious, organic, and functional food options.",
+      "The Northeast region dominates the market due to large, diverse population, high urbanization, and fast-paced lifestyle in metropolitan areas like New York City, Boston, and Philadelphia, with strong economic conditions and higher disposable income levels fueling consumer spending on dining out.",
+      "Major market trends include the rise of online ordering and food delivery services through platforms like Uber Eats, DoorDash, and Grubhub, along with increasing focus on health-conscious and sustainable dining options including plant-based, gluten-free, and locally sourced ingredients with eco-friendly packaging."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": {
+          "USD": 210,
+          "JPY": 30000,
+          "EUR": 180,
+          "KRW": 277200
+        }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": {
+          "USD": 217,
+          "JPY": 31000,
+          "EUR": 186,
+          "KRW": 286440
+        }
+      }
+    ]
+  },
+  {
+    "id": "5516213",
+    "title": "Nannochloropsis Market Size, Share, Forecast, & Trends Analysis by Form, Application - Global Forecast to 2031",
+    "date": "August 2024",
+    "type": "Report",
+    "pages": 152,
+    "category": "biotechnology",
+    "summary": "The Nannochloropsis market is projected to reach $14.0 million by 2031, at a CAGR of 8.5% from 2024 to 2031. In terms of volume, the market is projected to reach 122 tons by 2031, at a CAGR of 9.4% during the forecast period, driven by increasing demand for algal protein, protein-rich aquafeed, and omega-3 fatty acids.",
+    "content": [
+      "The Nannochloropsis market is projected to reach $14.0 million by 2031 at 8.5% CAGR in value and 122 tons at 9.4% CAGR in volume from 2024-2031, driven by increasing demand for algal protein, protein-rich and lipid-rich aquafeed, and rising demand for omega-3 fatty acids.",
+      "The frozen segment dominates with 61.5% market share in 2024 and is projected to register the highest CAGR of 8.9%, attributed to higher adoption in aquafeed applications, especially in aquaculture hatcheries for establishing artificial food chains due to high nutritional value and rich fatty acid content.",
+      "The aquafeed segment accounts for the largest share of 72.9% in 2024 due to extensive use of Nannochloropsis in aquaculture for its nutritional value and ability to produce valuable compounds such as pigments (zeaxanthin, astaxanthin, canthaxanthin) and polyunsaturated fatty acids.",
+      "Europe is expected to account for the largest share of 35.7% in 2024, attributed to growing aquaculture industry, increasing health awareness, rising demand for omega-3 fatty acids, and increasing demand for algae protein, with additional opportunities from the biodiesel industry.",
+      "Key market players include Proviron Industries NV, Reed Mariculture Inc., Necton S.A., BlueBioTech Group, Allmicroalgae Natural Products S.A., Algatechnologies Ltd., and others, with growth opportunities in biodiesel industry while facing challenges from complex production processes and contamination risks."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF And Excel",
+        "price": {
+          "USD": 112,
+          "JPY": 16000,
+          "EUR": 96,
+          "KRW": 147840
+        }
+      },
+      {
+        "type": "1 - 5 User License PDF And Excel",
+        "price": {
+          "USD": 119,
+          "JPY": 17000,
+          "EUR": 102,
+          "KRW": 157080
+        }
+      },
+      {
+        "type": "Enterprise License PDF And Excel",
+        "price": {
+          "USD": 126,
+          "JPY": 18000,
+          "EUR": 108,
+          "KRW": 166320
+        }
+      }
+    ]
+  },
+  {
+    "id": "5832239",
+    "title": "Heated Tobacco Market Database",
+    "date": "August 2024",
+    "type": "Database",
+    "pages": null,
+    "category": "tobacco",
+    "summary": "This exclusive markets database provides key quarterly insights on heated tobacco frontrunners all over the world. The in-depth research covers more than 60 countries, including the leading markets of Japan, South Korea and Italy, as well as relevant markets around the world, with market size estimates, market share data, and forecasts up to 2025.",
+    "content": [
+      "The database provides comprehensive quarterly insights on heated tobacco markets covering more than 60 countries including leading markets of Japan, South Korea, and Italy, with market size estimates for each country and market share estimates with historical data from 2019 onwards.",
+      "Market share forecasts for heated tobacco extend up to the end of 2025, covering market shares of each brand, heated tobacco usage rates for all users aged over 18, and devices and consumables available in each country including brands and pricing information.",
+      "The database includes detailed analysis of flavours available in each country and which brands are offering them, along with original research into which devices and brands are available in different retail channels including brand stores, tobacconists, online, convenience stores, and fuel stations.",
+      "Geographic coverage spans across Europe, Asia, Americas, and Middle East & Africa with countries including Albania, Austria, Canada, China, France, Germany, Italy, Japan, South Korea, United States, United Kingdom, and many others providing comprehensive global market intelligence.",
+      "The database offers independently researched data that can be filtered according to various parameters including market size, market share, brand performance, device availability, pricing, and retail channel distribution, making it valuable for strategic decision-making in the heated tobacco industry."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": {
+          "USD": 133,
+          "JPY": 19000,
+          "EUR": 114,
+          "KRW": 175560
+        }
+      }
+    ]
+  },
+  {
+    "id": "3928486",
+    "title": "Gift Card and Incentive Cards Market Intelligence - Annual Subscription for 40 Countries (Market Size and Forecast (2011-2020), Targeting Strategies, Analysis of Business and Consumer Trends, Consumer Attitude & Behaviour, and Market Innovation)",
+    "date": "December 2024",
+    "type": "Newsletter",
+    "pages": null,
+    "category": "financial-services",
+    "summary": "This annual subscription provides detailed analysis of gift and incentive card segments across 40 key countries, covering innovation and strategies adopted to gain market share. The subscription includes 40 country reports with data in Excel spreadsheets, updated every six months, plus four quarterly roundups covering innovation across global markets.",
+    "content": [
+      "The annual subscription includes 40 country reports with data in Excel spreadsheets (20 insight reports and 20 databooks) updated every six months, plus four quarterly roundups covering innovation across global markets, providing comprehensive market intelligence for gift and incentive card segments.",
+      "Each country report provides detailed analysis of gift cards (open loop and closed loop categories) and incentive cards (consumer incentive and employee/partner incentive), with market size and forecast at category level by functional attributes and corporate consumer segments including small scale, mid-size, and enterprise business.",
+      "Market analysis covers over 50 KPIs including number of cards in circulation, number of transactions, load value, and value of transactions, with comprehensive consumer behavior analysis by age, gender, income level, and spending patterns across five key categories: travel, bill payment, retail spend, cash withdrawal, and P2P transfers.",
+      "The subscription provides benchmarking with key global markets and risk assessment through proprietary Prepaid Cards Industry Risk Index (PCIRI), along with detailed retail spend breakdown across 11 categories including food & grocery, health & beauty, apparel, consumer electronics, and entertainment.",
+      "Innovation and market strategies section explores prepaid card strategies including competitive positioning, new product launches, and market opportunities across 30 market segments for the period 2011-2020, helping identify growth segments and develop market-specific strategies for prepaid cards industry."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License Digital - 1 Year Subscription",
+        "price": {
+          "USD": 280,
+          "JPY": 40000,
+          "EUR": 240,
+          "KRW": 369600
+        }
+      },
+      {
+        "type": "Enterprise License Digital - 1 Year Subscription",
+        "price": {
+          "USD": 301,
+          "JPY": 43000,
+          "EUR": 258,
+          "KRW": 397320
+        }
+      }
+    ]
+  },
+  {
+    "id": "6052333",
+    "title": "Fitness & Wellness Software Market - Global Outlook & Forecast 2025-2030",
+    "date": "February 2025",
+    "type": "Report",
+    "pages": 383,
+    "category": "technology",
+    "summary": "The Fitness & Wellness Software Market was valued at USD 81.90 billion in 2024, and is projected to reach USD 133.70 billion by 2030, rising at a CAGR of 8.51%. The market is driven by growing demand for digital fitness solutions, integration with wearable technology, and subscription-based models offering personalized workouts and AI-driven recommendations.",
+    "content": [
+      "The fitness & wellness software market was valued at USD 81.90 billion in 2024 and is projected to reach USD 133.70 billion by 2030 at 8.51% CAGR, driven by the shift towards at-home fitness solutions catalyzed by COVID-19 pandemic and growing demand for convenience, personalized programs, and real-time progress tracking.",
+      "Cloud-based software leads the market share due to accessibility, scalability, and seamless integration capabilities, enabling users to access services across devices with real-time updates, supporting hybrid fitness models, virtual classes, and personalized coaching with companies like Mindbody and Peloton leveraging cloud platforms.",
+      "The adult segment dominates the market due to increasing focus on personal health among working professionals aged 18-60, driving demand for solutions offering flexibility such as virtual fitness classes, progress tracking, and wellness coaching with AI-driven personalization and wearable integrations.",
+      "North America leads the global market due to strong health-conscious culture and advanced technological infrastructure, with major players like Peloton, Fitbit, Mindbody, and MyFitnessPal utilizing cutting-edge technologies like cloud computing, AI, and machine learning for data-driven personalized fitness solutions.",
+      "Key market trends include rise of hybrid fitness models combining gym workouts with home exercises, integration with wearable technology like Apple Watch and Fitbit for real-time health monitoring, and subscription-based models offering exclusive features while Asia-Pacific emerges as the fastest-growing region."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": {
+          "USD": 700,
+          "JPY": 100000,
+          "EUR": 600,
+          "KRW": 924000
+        }
+      },
+      {
+        "type": "1 - 5 User License PDF",
+        "price": {
+          "USD": 770,
+          "JPY": 110000,
+          "EUR": 660,
+          "KRW": 1016400
+        }
+      },
+      {
+        "type": "Enterprise License PDF",
+        "price": {
+          "USD": 1050,
+          "JPY": 150000,
+          "EUR": 900,
+          "KRW": 1386000
+        }
+      }
+    ]
+  },
+  {
+    "id": "5514128",
+    "title": "The Home and Small Business Security System Market - 14th Edition",
+    "date": "November 2024",
+    "type": "Report",
+    "pages": 130,
+    "category": "security",
+    "summary": "Security systems for small businesses and private homes are divided into three main categories - local, self-monitored and professionally monitored security systems. Professionally monitored alarm systems in Europe and North America reached 55 million in 2023, with North America having 36.0 million active systems and Europe having 19.0 million active systems.",
+    "content": [
+      "The North American market for home and small business security systems had an estimated 36.0 million active monitored alarm systems at the end of 2023 with 23.2% penetration rate among 155 million households and small businesses, growing at 3.6% CAGR to reach 42.9 million systems by 2028.",
+      "The EU27+3 market had about 19.0 million active monitored alarm systems at the end of 2023 with 7.6% overall penetration rate among 250 million households and small businesses, indicating significant growth potential especially in residential segment with only 6.3% current penetration.",
+      "Security systems are categorized into local systems (alarm sound only), self-monitored systems (connected with remote notifications), and professionally monitored systems (connected to Alarm Receiving Centres for security patrol dispatch and emergency services contact), with latest generation using dual wired and wireless connections.",
+      "The report provides insights from 30 executive interviews with market leading companies, new data on alarm system adoption by country and segment, comprehensive value chain overview, and detailed profiles of key players on European and North American security markets.",
+      "Key market trends include alarm system providers investing in smart home technology, emergence of DIY home alarm systems as potential threats to traditional players, development of cellular IoT applications in alarm systems, and secure alarm communications services for reliable connectivity."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF And Excel",
+        "price": {
+          "USD": 35,
+          "JPY": 5000,
+          "EUR": 30,
+          "KRW": 46200
+        }
+      },
+      {
+        "type": "1 - 10 User License PDF And Excel",
+        "price": {
+          "USD": 37,
+          "JPY": 5250,
+          "EUR": 32,
+          "KRW": 48510
+        }
+      },
+      {
+        "type": "Enterprise License PDF And Excel",
+        "price": {
+          "USD": 37,
+          "JPY": 5300,
+          "EUR": 32,
+          "KRW": 48972
+        }
       }
     ]
   }
+
+
+
 ]

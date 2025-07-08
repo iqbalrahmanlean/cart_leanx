@@ -15,6 +15,12 @@ import ReportDetailPage from './components/ReportDetailPage';
 import './styles.css';
 import './i18n';
 import PaymentSuccessPage from './components/PaymentSuccessPage';
+import PharmaceuticalsReportsPage from './components/PharmaceuticalsReportsPage';
+import ChemicalsMaterialsReportsPage from './components/ChemicalsMaterialsReportsPage';
+import ManufacturingConstructionReportsPage from './components/ManufacturingConstructionReportsPage';
+import EnergyNaturalResourcesReportsPage from './components/EnergyNaturalResourcesReportsPage';
+import FoodBeverageReportsPage from './components/FoodBeverageReportsPage';
+import ConsumerGoodsServicesReportsPage from './components/ConsumerGoodsServicesReportsPage';
 
 function HomePage() {
   return (
@@ -53,40 +59,24 @@ function AppContent() {
           <Route path="/" element={<HomePage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/payment-success" element={<PaymentSuccessPage />} />
-          <Route path="/report/healthcare" element={<HealthcareReportsPage />} />
-          <Route path="/report/healthcare/:id" element={<ReportDetailPage />} />
           
-          {/* Category routes with proper containers */}
-          <Route path="/report/pharmaceuticals" element={
-            <div className="max-w-7xl mx-auto px-5 py-10">
-              <h1 className="text-3xl font-bold text-gray-800">Pharmaceuticals Page</h1>
-            </div>
-          } />
-          <Route path="/report/chemicals-materials" element={
-            <div className="max-w-7xl mx-auto px-5 py-10">
-              <h1 className="text-3xl font-bold text-gray-800">Chemicals & Materials Page</h1>
-            </div>
-          } />
-          <Route path="/report/manufacturing-construction" element={
-            <div className="max-w-7xl mx-auto px-5 py-10">
-              <h1 className="text-3xl font-bold text-gray-800">Manufacturing & Construction Page</h1>
-            </div>
-          } />
-          <Route path="/report/energy-natural-resources" element={
-            <div className="max-w-7xl mx-auto px-5 py-10">
-              <h1 className="text-3xl font-bold text-gray-800">Energy & Natural Resources Page</h1>
-            </div>
-          } />
-          <Route path="/report/food-beverage" element={
-            <div className="max-w-7xl mx-auto px-5 py-10">
-              <h1 className="text-3xl font-bold text-gray-800">Food & Beverage Page</h1>
-            </div>
-          } />
-          <Route path="/report/consumer-goods-services" element={
-            <div className="max-w-7xl mx-auto px-5 py-10">
-              <h1 className="text-3xl font-bold text-gray-800">Consumer Goods & Services Page</h1>
-            </div>
-          } />
+          {/* Category List Pages */}
+          <Route path="/report/healthcare" element={<HealthcareReportsPage />} />
+          <Route path="/report/pharmaceuticals" element={<PharmaceuticalsReportsPage />} />
+          <Route path="/report/chemicals-materials" element={<ChemicalsMaterialsReportsPage />} />
+          <Route path="/report/manufacturing-construction" element={<ManufacturingConstructionReportsPage />} />
+          <Route path="/report/energy-natural-resources" element={<EnergyNaturalResourcesReportsPage />} />
+          <Route path="/report/food-beverage" element={<FoodBeverageReportsPage />} />
+          <Route path="/report/consumer-goods-services" element={<ConsumerGoodsServicesReportsPage />} />
+
+          {/* Detail Pages for ALL Categories */}
+          <Route path="/report/healthcare/:id" element={<ReportDetailPage />} />
+          <Route path="/report/pharmaceuticals/:id" element={<ReportDetailPage />} />
+          <Route path="/report/chemicals-materials/:id" element={<ReportDetailPage />} />
+          <Route path="/report/manufacturing-construction/:id" element={<ReportDetailPage />} />
+          <Route path="/report/energy-natural-resources/:id" element={<ReportDetailPage />} />
+          <Route path="/report/food-beverage/:id" element={<ReportDetailPage />} />
+          <Route path="/report/consumer-goods-services/:id" element={<ReportDetailPage />} />
         </Routes>
       </main>
       

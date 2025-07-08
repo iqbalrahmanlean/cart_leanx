@@ -1,0 +1,24 @@
+/* Navigation.css */
+
+/* Mobile navigation - show only on screens smaller than 768px */
+.mobile-nav {
+  display: block;
+}
+
+/* Desktop navigation - hide by default */
+.desktop-nav {
+  display: none;
+}
+
+/* Media query for desktop and tablet screens (768px and above) */
+@media (min-width: 768px) {
+  /* Hide mobile navigation on desktop */
+  .mobile-nav {
+    display: none;
+  }
+  
+  /* Show desktop navigation */
+  .desktop-nav {
+    display: block;
+  }
+}

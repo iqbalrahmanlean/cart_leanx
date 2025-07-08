@@ -1,11 +1,11 @@
-// src/components/HealthcareReportsPage.js
+// src/components/EnergyNaturalResourcesReportsPage.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 // Import the JSON data directly
-import healthcareData from '../data/healthcare_details.json';
+import energyNaturalResourcesData from '../data/energy.json';
 
-const HealthcareReportsPage = () => {
+const EnergyNaturalResourcesReportsPage = () => {
   const { t, i18n } = useTranslation();
   const [reports, setReports] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,12 +15,12 @@ const HealthcareReportsPage = () => {
   const [viewMode, setViewMode] = useState('grid');
   const [priceRange, setPriceRange] = useState('all');
 
-  // Currency conversion rates
+  // Currency conversion rates (JPY is base in your data)
   const currencyRates = {
-    'USD ($)': 1,
-    'JPY (¥)': 143,
-    'EUR (€)': 0.85,
-    'KRW (₩)': 1320
+    'USD ($)': 0.007, // 1 JPY = 0.007 USD
+    'JPY (¥)': 1,     // Base currency
+    'EUR (€)': 0.006, // 1 JPY = 0.006 EUR
+    'KRW (₩)': 9.2    // 1 JPY = 9.2 KRW
   };
 
   // Get currency symbol for display
@@ -34,10 +34,17 @@ const HealthcareReportsPage = () => {
     return symbols[currency] || '$';
   };
 
+  // Extract numeric value from price string (e.g., "¥12,000" -> 12000)
+  const parsePrice = (priceString) => {
+    if (!priceString) return 0;
+    // Remove currency symbol and commas, then parse
+    return parseFloat(priceString.replace(/[¥,$]/g, '').replace(/,/g, ''));
+  };
+
   // Convert price to selected currency
-  const convertPrice = (usdPrice, targetCurrency) => {
+  const convertPrice = (jpyPrice, targetCurrency) => {
     const rate = currencyRates[targetCurrency] || 1;
-    const convertedPrice = usdPrice * rate;
+    const convertedPrice = jpyPrice * rate;
     
     if (targetCurrency === 'JPY (¥)' || targetCurrency === 'KRW (₩)') {
       return Math.round(convertedPrice).toLocaleString();
@@ -45,11 +52,9 @@ const HealthcareReportsPage = () => {
     return convertedPrice.toFixed(2);
   };
 
-  // Get the minimum price from license options
-  const getMinPrice = (licenseOptions) => {
-    if (!licenseOptions || licenseOptions.length === 0) return 0;
-    const prices = licenseOptions.map(option => option.price.USD);
-    return Math.min(...prices);
+  // Get the minimum price from simple price field
+  const getMinPrice = (report) => {
+    return parsePrice(report.price);
   };
 
   // Load currency from localStorage
@@ -83,7 +88,7 @@ const HealthcareReportsPage = () => {
   // Load data from imported JSON
   useEffect(() => {
     setTimeout(() => {
-      setReports(healthcareData);
+      setReports(energyNaturalResourcesData);
       setLoading(false);
     }, 300);
   }, []);
@@ -96,7 +101,7 @@ const HealthcareReportsPage = () => {
   const processedReports = reports
     .filter(report => {
       if (priceRange === 'all') return true;
-      const minPrice = getMinPrice(report.licenseOptions);
+      const minPrice = getMinPrice(report);
       const convertedPrice = convertPrice(minPrice, currentCurrency);
       const price = parseFloat(convertedPrice.replace(',', ''));
       
@@ -109,8 +114,8 @@ const HealthcareReportsPage = () => {
     })
     .sort((a, b) => {
       switch(sortBy) {
-        case 'price-low': return getMinPrice(a.licenseOptions) - getMinPrice(b.licenseOptions);
-        case 'price-high': return getMinPrice(b.licenseOptions) - getMinPrice(a.licenseOptions);
+        case 'price-low': return getMinPrice(a) - getMinPrice(b);
+        case 'price-high': return getMinPrice(b) - getMinPrice(a);
         case 'title': return a.title.localeCompare(b.title);
         default: return new Date(b.date) - new Date(a.date);
       }
@@ -121,7 +126,7 @@ const HealthcareReportsPage = () => {
 
   // Card Component
   const ReportCard = ({ report }) => {
-    const minPrice = getMinPrice(report.licenseOptions);
+    const minPrice = getMinPrice(report);
     const convertedMinPrice = convertPrice(minPrice, currentCurrency);
     const currencySymbol = getCurrencySymbol(currentCurrency);
     
@@ -132,7 +137,7 @@ const HealthcareReportsPage = () => {
         <div className="p-4 flex-1 flex flex-col">
           <div className="flex-1">
             <Link to={`/report/${report.category}/${report.id}`}>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-green-600 transition-colors">
                 {report.title}
               </h3>
             </Link>
@@ -152,11 +157,7 @@ const HealthcareReportsPage = () => {
                   {currencySymbol}{convertedMinPrice}
                 </div>
               </div>
-              <Link to={`/report/${report.category}/${report.id}`}>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors">
-                  View Report
-                </button>
-              </Link>
+            
             </div>
           </div>
         </div>
@@ -166,35 +167,38 @@ const HealthcareReportsPage = () => {
 
   // List Item Component
   const ListItem = ({ report }) => {
-    const minPrice = getMinPrice(report.licenseOptions);
+    const minPrice = getMinPrice(report);
     const convertedMinPrice = convertPrice(minPrice, currentCurrency);
     const currencySymbol = getCurrencySymbol(currentCurrency);
     
     return (
-      <div className="bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-cyan-200">
+      <div className="bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-green-200">
         <div className="p-6">
           <div className="flex items-start justify-between">
             <div className="flex-1 pr-6">
               <div className="flex items-center mb-2">
-                <span className="marg-5 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium   mr-3">
+                <span className="marg-5 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 mr-3">
                   {report.type}
                 </span>
                 <span className="text-sm text-gray-500">{report.date}</span>
               </div>
               <Link to={`/report/${report.category}/${report.id}`}>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 hover: transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-green-600 transition-colors">
                   {report.title}
                 </h3>
               </Link>
               <div className="flex items-center space-x-4 text-sm text-gray-500">
                 {report.pages && (
-                  <span className="flex items-center">
+                  <span className="flex items-center marg-5">
                     <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     {report.pages} {t('pages')}
                   </span>
                 )}
+                <span className="flex items-center">
+                  Energy & Natural Resources
+                </span>
               </div>
             </div>
             <div className="text-right flex-shrink-0">
@@ -202,11 +206,7 @@ const HealthcareReportsPage = () => {
               <p className="text-3xl font-bold text-gray-900 mb-3">
                 {currencySymbol}{convertedMinPrice}
               </p>
-              <Link to={`/report/${report.category}/${report.id}`}>
-                <button className="bg-cyan-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-cyan-700 transition-colors">
-                  View Details
-                </button>
-              </Link>
+        
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@ const HealthcareReportsPage = () => {
             {[...Array(6)].map((_, i) => (
               <div key={i} className="animate-pulse">
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                  <div className="h-48 bg-gradient-to-br from-cyan-50 to-blue-50"></div>
+                  <div className="h-48 bg-gradient-to-br from-green-50 to-yellow-50"></div>
                   <div className="p-6 space-y-4">
                     <div className="h-6 bg-gray-200 rounded w-3/4"></div>
                     <div className="h-4 bg-gray-200 rounded w-1/2"></div>
@@ -256,11 +256,11 @@ const HealthcareReportsPage = () => {
         {/* Hero Section */}
         <div className="p-5 py-12 text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {t('healthcare')} Market Research Reports
+           Energy & Natural Resources Market Research Reports
           </h1>
-          {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive market intelligence and industry insights to drive your healthcare business decisions
-          </p> */}
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive analysis of energy markets, renewable technologies, mining solutions, and natural resource management driving the sustainable future
+          </p>
         </div>
 
         {/* Filters and Controls */}
@@ -273,7 +273,7 @@ const HealthcareReportsPage = () => {
                 <select 
                   value={sortBy} 
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 >
                   <option value="newest">Newest First</option>
                   <option value="price-low">Price: Low to High</option>
@@ -287,7 +287,7 @@ const HealthcareReportsPage = () => {
                 <select 
                   value={priceRange} 
                   onChange={(e) => setPriceRange(e.target.value)}
-                  className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 >
                   <option value="all">All Prices</option>
                   <option value="under-1000">Under {getCurrencySymbol(currentCurrency)}1,000</option>
@@ -309,7 +309,7 @@ const HealthcareReportsPage = () => {
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors ${
                     viewMode === 'grid' 
-                      ? 'bg-white shadow-sm ' 
+                      ? 'bg-white shadow-sm text-green-600' 
                       : 'text-gray-500 hover:text-gray-700'
                   }`}
                 >
@@ -321,7 +321,7 @@ const HealthcareReportsPage = () => {
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-colors ${
                     viewMode === 'list' 
-                      ? 'bg-white shadow-sm ' 
+                      ? 'bg-white shadow-sm text-green-600' 
                       : 'text-gray-500 hover:text-gray-700'
                   }`}
                 >
@@ -339,14 +339,11 @@ const HealthcareReportsPage = () => {
           <div className="pb-12">
             {/* Grid View */}
             {viewMode === 'grid' && (
-              
-
-            <div className="grid my-grid gap-8 mb-12">
+              <div className="grid my-grid gap-8 mb-12">
                 {displayedReports.map((report) => (
                   <ReportCard key={report.id} report={report} />
                 ))}
               </div>
-            
             )}
 
             {/* List View */}
@@ -366,7 +363,6 @@ const HealthcareReportsPage = () => {
                   className="p-5 text-black bg-gradient-to-r from-cyan-600 to-blue-600  px-8 py-3 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   Load More Reports
-                
                 </button>
               </div>
             )}
@@ -374,17 +370,15 @@ const HealthcareReportsPage = () => {
         ) : (
           <div className="text-center py-16">
             <div className="max-w-md mx-auto">
-              <svg className="w-24 h-24 mx-auto text-gray-300 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-2">No reports found</h3>
+          
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">No energy & natural resources reports found</h3>
               <p className="text-gray-500 mb-6">Try adjusting your filters to see more results.</p>
               <button 
                 onClick={() => {
                   setSortBy('newest');
                   setPriceRange('all');
                 }}
-                className="bg-cyan-600 text-white px-6 py-3 rounded-lg hover:bg-cyan-700 transition-colors"
+                className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
               >
                 Clear Filters
               </button>
@@ -396,10 +390,10 @@ const HealthcareReportsPage = () => {
         <div className="border-t border-gray-200 pt-8 pb-12">
           <div className="text-center">
             <p className="text-lg text-gray-600">
-              <span className="font-semibold ">{reports.length}</span> healthcare market research reports available
+              <span className="font-semibold text-green-600">{reports.length}</span> energy & natural resources market research reports available
             </p>
             <p className="text-sm text-gray-500 mt-2">
-              Updated daily with the latest industry insights and market analysis
+              Covering renewable energy, battery technologies, mining solutions, power generation, and sustainable resource management
             </p>
           </div>
         </div>
@@ -408,4 +402,4 @@ const HealthcareReportsPage = () => {
   );
 };
 
-export default HealthcareReportsPage;
+export default EnergyNaturalResourcesReportsPage;
