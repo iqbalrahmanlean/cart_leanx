@@ -326,8 +326,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
-    lng: localStorage.getItem('i18nextLng') || 'en', // Read from localStorage first
+    fallbackLng: 'ja',
+    lng: localStorage.getItem('i18nextLng') || 'ja', // Read from localStorage first
     
     interpolation: {
       escapeValue: false, // react already does escaping
