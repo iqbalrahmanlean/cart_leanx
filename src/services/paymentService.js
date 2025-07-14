@@ -19,7 +19,7 @@ const PAYRIGHT_CONFIG = {
 // Currency conversion rates to MYR
 const CURRENCY_TO_MYR_RATES = {
   'USD ($)': 4.714317,
-  'JPY (¥)': 0.03296745,
+  'JPY (¥)': 0.032967420,
   'EUR (€)': 5.1,
   'KRW (₩)': 0.0036,
 };
