@@ -41,9 +41,9 @@ const SettingsModal = ({ isOpen, onClose }) => {
   }, []);
 
   const regions = [
-    { value: 'United States', label: t('united_states') },
-    { value: 'Japan', label: t('japan') },
-    { value: 'South Korea', label: t('south_korea') }
+    { value: 'United States', label: 'United States' },
+    { value: 'Japan', label: '日本'},
+    { value: 'South Korea', label: '韓国'}
   ];
 
   // Fixed: Use native language names instead of translated ones

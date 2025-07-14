@@ -281,7 +281,7 @@ const CheckoutForm = ({ cartItems, totalAmount, currency, onClose, onSuccess }) 
                 >
                   Privacy Policy
                 </button>
-                , and authorize the processing of my payment via LeanPay.
+                , and authorize the processing of my payment via PayRight.
               </label>
             </div>
 
