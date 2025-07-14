@@ -8,6 +8,7 @@ const resources = {
   en: {
     translation: {
       // Header
+      "contact_us" : "Contact Us",
       "twopip_research": "Twopip Research",
       "global_marketplace": "Global Market Research Marketplace",
       "english": "English",
@@ -99,6 +100,7 @@ const resources = {
       "united_states": "United States",
       "japan": "Japan",
       "south_korea": "South Korea",
+
       
       // Languages
       "japanese": "Japanese",
@@ -224,6 +226,7 @@ const resources = {
   ko: {
     translation: {
       // Header
+      "contact_us" : "お問い合わせ",
       "twopip_research": "Twopip Research",
       "global_marketplace": "글로벌 시장 조사 마켓플레이스",
       "english": "영어",

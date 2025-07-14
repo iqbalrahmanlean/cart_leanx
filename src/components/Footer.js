@@ -24,16 +24,16 @@ const Footer = () => {
               <strong>代表者名</strong> : 
               Gilbert Lee
             </p>
-            <a className="text-white underline hover:text-neutral-200 transition-colors" href="/jp-JP/specified-commercial-transactions">
+            <a className="text-white underline hover:text-neutral-200 transition-colors" href="/">
               特定商取引法に基づく表記
             </a>
           </div>
         </div>
         <div>
-          <a className="text-body2 text-neutral-400 underline hover:text-white transition-colors" href="/jp-JP/privacy-policy">
+          <a className="text-body2 text-neutral-400 underline hover:text-white transition-colors" href="/">
             プライバシーポリシー
           </a>
-          <a className="ml-3 text-body2 text-neutral-400 underline hover:text-white transition-colors" href="/jp-JP/terms-conditions">
+          <a className="ml-3 text-body2 text-neutral-400 underline hover:text-white transition-colors" href="/">
             利用規約
           </a>
           <p className="mt-1 text-neutral-400">

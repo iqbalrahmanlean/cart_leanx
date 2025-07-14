@@ -65,7 +65,7 @@ const ReportsSection = () => {
         <a 
           className="flex justify-center items-center gap-1.5 py-2.5 px-5 text-base leading-6 w-fit h-12 text-center rounded transition-colors duration-150 ease-out disabled:cursor-not-allowed disabled:opacity-20 disabled:bg-gray-500 disabled:text-white bg-cyan-800 text-white hover:bg-cyan-900 mb-[20px] py-5
 " 
-          href="/jp-JP/report/healthcare"
+          href="/"
         >
           さらにレポートを見る
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" color="#eee" width="20">

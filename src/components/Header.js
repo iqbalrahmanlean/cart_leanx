@@ -185,7 +185,7 @@ const Header = () => {
                         <h1 className="cursor-pointer text-lg font-semibold mobile:text-sm mobile:truncate mobile:max-w-20">
                             {t('twopip_research')}
                         </h1>
-                        <a className="text-sm text-gray-500 mobile:text-xs mobile:hidden" href="/jp-JP">
+                        <a className="text-sm text-gray-500 mobile:text-xs mobile:hidden" href="/">
                             {t('global_marketplace')}
                         </a>
                     </div>
