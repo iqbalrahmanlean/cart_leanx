@@ -10,6 +10,8 @@ import energyData from '../data/energy.json';
 import foodData from '../data/food.json';
 import consumerData from '../data/consumer.json';
 import { addToCart } from '../utils/cartUtils';
+import promotionalData from '../data/promotional-offers.json';
+
 
 const ReportDetailPage = () => {
   const { category, id } = useParams();
@@ -21,12 +23,12 @@ const ReportDetailPage = () => {
   const [currentCurrency, setCurrentCurrency] = useState('USD ($)');
 
   // Currency conversion rates
-  const currencyRates = {
-    'USD ($)': 0.007, // 1 JPY = 0.007 USD (for simple price structure)
-    'JPY (¥)': 1,     // Base currency
-    'EUR (€)': 0.006, // 1 JPY = 0.006 EUR
-    'KRW (₩)': 9.2    // 1 JPY = 9.2 KRW
-  };
+   const currencyRates = {
+        'USD ($)': 1,
+        'JPY (¥)': 143,
+        'EUR (€)': 0.85,
+        'KRW (₩)': 1320
+    };
 
   // Healthcare uses different rates (USD base)
   const healthcareCurrencyRates = {
@@ -83,6 +85,7 @@ const ReportDetailPage = () => {
       case 'energy-natural-resources': return energyData;
       case 'food-beverage': return foodData;
       case 'consumer-goods-services': return consumerData;
+          case 'promotional': return promotionalData; // Add this
       default: return healthcareData;
     }
   };

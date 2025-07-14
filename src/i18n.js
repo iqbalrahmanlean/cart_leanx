@@ -12,8 +12,10 @@ const resources = {
       "global_marketplace": "Global Market Research Marketplace",
       "english": "English",
       "cart": "Cart",
+     "Special_Promotional_Offers" : "Special Promotional Offers",
 
       "buying_option" : "Buying Options",
+      "limited" : "Limited-time deals on premium market research reports. Save big on industry insights and competitive intelligence.",
       
       // Navigation
       "healthcare": "Healthcare",
@@ -163,6 +165,8 @@ const resources = {
       "life_sciences": "ライフサイエンス",
       "technology_media": "テクノロジー・メディア",
       "marketing_research": "マーケティング・市場調査",
+      "Special_Promotional_Offers" : "特別プロモーションオファー",
+      "limited" : "プレミアム市場調査レポートを期間限定でお得に。業界洞察と競合情報をお得に入手できます。",
       
       // Reports Section
       "featured_reports": "注目の市場調査レポート",

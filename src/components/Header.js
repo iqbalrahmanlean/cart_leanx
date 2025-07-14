@@ -12,7 +12,7 @@ const Header = () => {
     const [cartTotal, setCartTotal] = useState(0);
 
     // Currency conversion rates
-    const currencyRates = {
+     const currencyRates = {
         'USD ($)': 1,
         'JPY (¥)': 143,
         'EUR (€)': 0.85,

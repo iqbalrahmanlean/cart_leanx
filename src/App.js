@@ -21,12 +21,14 @@ import ManufacturingConstructionReportsPage from './components/ManufacturingCons
 import EnergyNaturalResourcesReportsPage from './components/EnergyNaturalResourcesReportsPage';
 import FoodBeverageReportsPage from './components/FoodBeverageReportsPage';
 import ConsumerGoodsServicesReportsPage from './components/ConsumerGoodsServicesReportsPage';
+import PromotionalComponent from './components/PromotionalComponent';
 
 function HomePage() {
   return (
     <>
       <HeroSection /> 
       <SearchSection />
+      <PromotionalComponent />
       <BrandsSection />
       <CategoriesSection />
       <ReportsSection /> 
@@ -68,6 +70,9 @@ function AppContent() {
           <Route path="/report/energy-natural-resources" element={<EnergyNaturalResourcesReportsPage />} />
           <Route path="/report/food-beverage" element={<FoodBeverageReportsPage />} />
           <Route path="/report/consumer-goods-services" element={<ConsumerGoodsServicesReportsPage />} />
+          
+          {/* Promotional Offers Page */}
+          <Route path="/report/promotional" element={<PromotionalComponent />} />
 
           {/* Detail Pages for ALL Categories */}
           <Route path="/report/healthcare/:id" element={<ReportDetailPage />} />
@@ -77,6 +82,9 @@ function AppContent() {
           <Route path="/report/energy-natural-resources/:id" element={<ReportDetailPage />} />
           <Route path="/report/food-beverage/:id" element={<ReportDetailPage />} />
           <Route path="/report/consumer-goods-services/:id" element={<ReportDetailPage />} />
+          
+          {/* Promotional Detail Pages */}
+          <Route path="/report/promotional/:id" element={<ReportDetailPage />} />
         </Routes>
       </main>
       

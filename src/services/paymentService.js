@@ -10,8 +10,8 @@ const LEANPAY_CONFIG = {
 
 // Currency conversion rates (you can fetch these from an API)
 const CURRENCY_TO_MYR_RATES = {
-  'USD ($)': 4.7,
-  'JPY (¥)': 0.033,
+  'USD ($)': 4.71432,
+  'JPY (¥)': 0.03296746,
   'EUR (€)': 5.1,
   'KRW (₩)': 0.0036,
   'MYR (RM)': 1

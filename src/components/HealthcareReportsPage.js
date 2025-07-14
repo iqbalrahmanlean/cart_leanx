@@ -16,12 +16,12 @@ const HealthcareReportsPage = () => {
   const [priceRange, setPriceRange] = useState('all');
 
   // Currency conversion rates
-  const currencyRates = {
-    'USD ($)': 1,
-    'JPY (¥)': 143,
-    'EUR (€)': 0.85,
-    'KRW (₩)': 1320
-  };
+   const currencyRates = {
+        'USD ($)': 1,
+        'JPY (¥)': 143,
+        'EUR (€)': 0.85,
+        'KRW (₩)': 1320
+    };
 
   // Get currency symbol for display
   const getCurrencySymbol = (currency) => {
