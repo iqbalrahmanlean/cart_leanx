@@ -17,11 +17,11 @@ const ConsumerGoodsServicesReportsPage = () => {
 
   // Currency conversion rates (JPY is base in your data)
     const currencyRates = {
-        'USD ($)': 1,
-        'JPY (¥)': 143,
-        'EUR (€)': 0.85,
-        'KRW (₩)': 1320
-    };
+    'USD ($)': 0.007, // 1 JPY = 0.007 USD
+    'JPY (¥)': 1,     // Base currency
+    'EUR (€)': 0.006, // 1 JPY = 0.006 EUR
+    'KRW (₩)': 9.2    // 1 JPY = 9.2 KRW
+  };
 
   // Get currency symbol for display
   const getCurrencySymbol = (currency) => {
