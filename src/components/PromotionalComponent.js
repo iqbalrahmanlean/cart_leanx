@@ -125,9 +125,9 @@ const PromotionalComponent = () => {
             <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4 mt-10">
+                    <h2 className="text-[35px] mobile:text-[28px] font-semibold text-center bg-gradient-to-r from-cyan-800 to-black bg-clip-text text-transparent drop-shadow-md leading-tight mb-10">
                         {t('Special_Promotional_Offers')}
-                    </h1>
+                    </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto p-5 mb-5">
                         {t('limited')}
 

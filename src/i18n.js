@@ -9,6 +9,11 @@ const resources = {
     translation: {
       // Header
       "contact_us" : "Contact Us",
+      "Market_Research_by_Category": "Market Research by Category",
+      'Featured_Market_Research_Reports' : "Featured Market Research Reports",
+
+
+
       "twopip_research": "Twopip Research",
       "global_marketplace": "Global Market Research Marketplace",
       "english": "English",
@@ -95,11 +100,19 @@ const resources = {
       "save_settings": "Save Settings",
       "region_note": "Change your region to see products specific to that region.",
       "please_note": "Please note:",
+      "heavy_industry" : "Heave Industry",
+
+
       
       // Countries
       "united_states": "United States",
       "japan": "Japan",
       "south_korea": "South Korea",
+      "food_beverage" :"Food Beverage",
+      "service_industry_" : "Service Industry",
+      "consumer_goods" :"Consumer Goods",
+  
+
 
       
       // Languages
@@ -204,6 +217,10 @@ const resources = {
       "full_name": "ご注意：",
       "email_address": "メールアドレス",
       "phone_number":"電話番号", 
+      "Market_Research_by_Category ": "カテゴリー別市場調査",
+      "Featured_Market_Research_Reports" : "注目の市場調査レポート",
+          "consumer_goods" :"消費財",
+
 
 
       
@@ -231,6 +248,9 @@ const resources = {
       "global_marketplace": "글로벌 시장 조사 마켓플레이스",
       "english": "영어",
       "cart": "장바구니",
+      "heavy_industry" : "重工業",
+      "food_beverage" :"食品・飲料",
+
       
       // Navigation
       "healthcare": "헬스케어",
@@ -287,6 +307,8 @@ const resources = {
       "privacy_policy": "개인정보처리방침",
       "terms_conditions": "이용약관",
       "copyright": "Copyright © Twopip. All Rights Reserved.",
+      'discover_more' : "さらにレポートを見る",
+
       
       // Cart Page
       "shopping_cart": "장바구니",

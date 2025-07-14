@@ -1,7 +1,11 @@
 // src/components/ReportsSection.js
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 const ReportsSection = () => {
+    const { t } = useTranslation();
+  
   const reports = [
     {
       title: "Option and Evaluation Deals in Pharmaceuticals and Biotechnology 2016-2024",
@@ -42,7 +46,10 @@ const ReportsSection = () => {
       <div className="absolute h-full w-full bg-cyan-800 opacity-40"></div>
       <div className="flex flex-col items-center gap-0 px-10 pb-10 pt-20">
         <p className="w-full text-center text-[35px] font-semibold leading-[54px] text-white drop-shadow-md">
-          注目の市場調査レポート
+ 
+          {t('Featured_Market_Research_Reports')}
+   
+
         </p>
         <hr className="z-10 my-5 h-[1.5px] w-24 border-0 bg-white" />
       </div>
@@ -66,8 +73,8 @@ const ReportsSection = () => {
           className="flex justify-center items-center gap-1.5 py-2.5 px-5 text-base leading-6 w-fit h-12 text-center rounded transition-colors duration-150 ease-out disabled:cursor-not-allowed disabled:opacity-20 disabled:bg-gray-500 disabled:text-white bg-cyan-800 text-white hover:bg-cyan-900 mb-[20px] py-5
 " 
           href="/"
-        >
-          さらにレポートを見る
+        >{t('discover_more')}
+        
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" color="#eee" width="20">
             <path fillRule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd"></path>
           </svg>
