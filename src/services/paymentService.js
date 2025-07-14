@@ -1,4 +1,4 @@
-// services/paymentService.js - Manual Collection Approach
+// services/paymentService.js - Clean version for PayRight Manual Collection
 
 const PAYRIGHT_CONFIG = {
   baseUrl: process.env.NODE_ENV === 'production' 
@@ -81,282 +81,30 @@ const cleanPhoneNumber = (phoneNumber) => {
 };
 
 /**
- * Create or get collection for bills - This creates the collection ID for the manual URL
+ * Simple function to create payment URL with known collection IDs
  */
-export const createCollection = async (collectionTitle = 'Market Research Reports') => {
+export const createSimplePaymentUrl = (paymentData, collectionId = null) => {
   try {
-    console.log('=== PayRight Create Collection for Manual Payment ===');
-    
-    const collectionPayload = {
-      title: collectionTitle,
-      description: `Collection for ${collectionTitle} purchases`,
-      // Add any other required fields for your use case
-      redirect_url: PAYRIGHT_CONFIG.redirectUrl,
-      callback_url: PAYRIGHT_CONFIG.callbackUrl
-    };
-    
-    console.log('Collection Endpoint:', `${PAYRIGHT_CONFIG.baseUrl}/merchant/collections`);
-    console.log('Collection Payload:', collectionPayload);
-    
-    const response = await fetch(`${PAYRIGHT_CONFIG.baseUrl}/merchant/collections`, {
-      method: 'POST',
-      headers: {
-        'auth-token': PAYRIGHT_CONFIG.authToken,
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(collectionPayload)
-    });
-    
-    const responseText = await response.text();
-    console.log('Collection Response Status:', response.status);
-    console.log('Collection Response Body:', responseText);
-    
-    let responseData = null;
-    try {
-      responseData = JSON.parse(responseText);
-    } catch (parseError) {
-      console.error('Collection JSON Parse Error:', parseError);
-      return {
-        success: false,
-        error: 'Failed to parse collection response',
-        debug: {
-          status: response.status,
-          responseText: responseText,
-          parseError: parseError.message
-        }
-      };
-    }
-    
-    if (response.ok && responseData) {
-      console.log('Full Collection Response Structure:', JSON.stringify(responseData, null, 2));
-      
-      if (responseData.response_code === 200 && responseData.description === 'SUCCESS') {
-        const collectionUuid = responseData.data?.collection_uuid || 
-                              responseData.data?.uuid ||
-                              responseData.data?.id ||
-                              responseData.collection_uuid ||
-                              responseData.uuid;
-        
-        console.log('Collection creation response:', {
-          responseCode: responseData.response_code,
-          description: responseData.description,
-          collectionUuid: collectionUuid,
-          dataObject: responseData.data
-        });
-        
-        if (collectionUuid) {
-          localStorage.setItem('payright_collection_uuid', collectionUuid);
-          
-          // Generate the manual payment URL
-          const manualPaymentUrl = `${PAYRIGHT_CONFIG.hostedPageUrl}?id=${collectionUuid}`;
-          
-          return {
-            success: true,
-            collectionUuid: collectionUuid,
-            manualPaymentUrl: manualPaymentUrl,
-            data: responseData
-          };
-        } else {
-          return {
-            success: false,
-            error: 'Collection UUID not found in response',
-            debug: {
-              fullResponse: responseData,
-              status: response.status,
-              responseStructure: Object.keys(responseData)
-            }
-          };
-        }
-      } else {
-        return {
-          success: false,
-          error: responseData.description || 'Failed to create collection',
-          debug: {
-            responseCode: responseData.response_code,
-            description: responseData.description,
-            fullResponse: responseData
-          }
-        };
-      }
-    }
-    
-    return {
-      success: false,
-      error: 'Invalid response from collection API',
-      debug: {
-        status: response.status,
-        statusText: response.statusText,
-        rawResponse: responseText
-      }
-    };
-  } catch (error) {
-    console.error('Collection Creation Error:', error);
-    return {
-      success: false,
-      error: error.message
-    };
-  }
-};
-
-/**
- * Create manual payment page URL - Simple approach using existing collection
- */
-export const createManualPaymentPage = async (paymentData) => {
-  try {
-    console.log('=== PayRight Manual Payment Page Creation ===');
-    console.log('Payment Data:', {
-      originalAmount: paymentData.amount,
-      originalCurrency: paymentData.currency,
-      customerName: paymentData.customerName,
-      customerEmail: paymentData.customerEmail,
-      customerPhone: paymentData.customerPhone
-    });
-
     const amountInMYR = convertToMYR(paymentData.amount, paymentData.currency);
     const orderReference = generateOrderReference();
     
-    // First, get or create a collection
-    let collectionUuid = localStorage.getItem('payright_collection_uuid');
+    // Use provided collection ID, or fall back to your known working ones
+    const workingCollectionId = collectionId || 
+                               paymentData.collectionId || 
+                               'py4FCC4FB1EDrgt' || // From your example URL
+                               'pyDFD9146441rgt' || // Your merchant UUID
+                               localStorage.getItem('payright_collection_uuid') ||
+                               'py4FCC4FB1EDrgt'; // Final fallback
     
-    if (!collectionUuid) {
-      console.log('No existing collection found, creating new one...');
-      const collectionResult = await createCollection(paymentData.collectionTitle || 'Online Payments');
-      
-      if (collectionResult.success) {
-        collectionUuid = collectionResult.collectionUuid;
-        console.log('Created new collection:', collectionUuid);
-      } else {
-        console.error('Failed to create collection:', collectionResult.error);
-        return {
-          success: false,
-          error: 'Failed to create payment collection: ' + collectionResult.error,
-          debug: collectionResult.debug
-        };
-      }
-    } else {
-      console.log('Using existing collection:', collectionUuid);
-    }
+    console.log('Using collection ID:', workingCollectionId);
     
-    // Generate the manual payment URL
-    const baseUrl = `${PAYRIGHT_CONFIG.hostedPageUrl}?id=${collectionUuid}`;
+    // Build the manual payment URL
+    const baseUrl = `${PAYRIGHT_CONFIG.hostedPageUrl}?id=${workingCollectionId}`;
     
     // Add URL parameters for pre-filling customer data
     const urlParams = new URLSearchParams();
     
-    // PayRight manual collection page parameters
-    if (paymentData.customerName && paymentData.customerName.trim()) {
-      urlParams.append('fullname', paymentData.customerName.trim());
-      urlParams.append('name', paymentData.customerName.trim()); // Fallback parameter name
-    }
-    
-    if (paymentData.customerEmail && paymentData.customerEmail.trim()) {
-      urlParams.append('email', paymentData.customerEmail.trim().toLowerCase());
-    }
-    
-    if (paymentData.customerPhone) {
-      const cleanedPhone = cleanPhoneNumber(paymentData.customerPhone);
-      urlParams.append('mobile', cleanedPhone);
-      urlParams.append('phone', cleanedPhone); // Fallback parameter name
-      urlParams.append('phone_number', cleanedPhone); // Another possible parameter name
-    }
-    
-    if (amountInMYR && amountInMYR > 0) {
-      urlParams.append('amount', amountInMYR.toFixed(2));
-    }
-    
-    if (orderReference) {
-      urlParams.append('reference', orderReference);
-      urlParams.append('ref', orderReference); // Shorter parameter name
-      urlParams.append('order_ref', orderReference); // More descriptive parameter name
-    }
-    
-    // Additional optional parameters that might be supported
-    if (paymentData.description) {
-      urlParams.append('description', paymentData.description);
-      urlParams.append('desc', paymentData.description);
-    }
-    
-    // Add currency info (even though converted to MYR)
-    urlParams.append('currency', 'MYR');
-    
-    // Add timestamp for tracking
-    urlParams.append('timestamp', new Date().getTime().toString());
-    
-    const finalPaymentUrl = urlParams.toString() 
-      ? `${baseUrl}&${urlParams.toString()}`
-      : baseUrl;
-    
-    // Store payment metadata for tracking
-    const paymentMetadata = {
-      orderReference: orderReference,
-      originalAmount: paymentData.amount,
-      originalCurrency: paymentData.currency,
-      amountInMYR: amountInMYR,
-      conversionRate: CURRENCY_TO_MYR_RATES[paymentData.currency],
-      customerInfo: {
-        name: paymentData.customerName,
-        email: paymentData.customerEmail,
-        phone: paymentData.customerPhone
-      },
-      orderItems: paymentData.orderItems || [],
-      timestamp: new Date().toISOString(),
-      paymentProvider: 'PayRight Malaysia - Manual Collection',
-      collectionUuid: collectionUuid,
-      paymentUrl: finalPaymentUrl,
-      status: 'pending',
-      paymentMethod: 'manual_collection'
-    };
-    
-    // Store in localStorage for tracking
-    localStorage.setItem(`manual_payment_${orderReference}`, JSON.stringify(paymentMetadata));
-    
-    console.log('Manual payment page created:', {
-      collectionUuid,
-      paymentUrl: finalPaymentUrl,
-      orderReference,
-      amountInMYR
-    });
-    
-    return {
-      success: true,
-      paymentUrl: finalPaymentUrl,
-      collectionUuid: collectionUuid,
-      orderReference: orderReference,
-      amountInMYR: amountInMYR,
-      message: 'Manual payment page created successfully. User will select payment method on PayRight.',
-      metadata: paymentMetadata
-    };
-    
-  } catch (error) {
-    console.error('Manual Payment Page Creation Error:', error);
-    return {
-      success: false,
-      error: 'Failed to create manual payment page: ' + error.message,
-      debug: {
-        exception: error.message,
-        stack: error.stack
-      }
-    };
-  }
-};
-
-/**
- * Alternative: Use an existing collection ID directly
- */
-export const createManualPaymentWithExistingCollection = (paymentData, existingCollectionId) => {
-  try {
-    console.log('=== Using Existing Collection for Manual Payment ===');
-    
-    const amountInMYR = convertToMYR(paymentData.amount, paymentData.currency);
-    const orderReference = generateOrderReference();
-    
-    // Build the manual payment URL with existing collection
-    const baseUrl = `${PAYRIGHT_CONFIG.hostedPageUrl}?id=${existingCollectionId}`;
-    
-    // Add URL parameters for pre-filling
-    const urlParams = new URLSearchParams();
-    
+    // Customer info - multiple parameter names for better compatibility
     if (paymentData.customerName && paymentData.customerName.trim()) {
       urlParams.append('fullname', paymentData.customerName.trim());
       urlParams.append('name', paymentData.customerName.trim());
@@ -387,11 +135,9 @@ export const createManualPaymentWithExistingCollection = (paymentData, existingC
     urlParams.append('currency', 'MYR');
     urlParams.append('timestamp', new Date().getTime().toString());
     
-    const finalPaymentUrl = urlParams.toString() 
-      ? `${baseUrl}&${urlParams.toString()}`
-      : baseUrl;
+    const finalPaymentUrl = `${baseUrl}&${urlParams.toString()}`;
     
-    // Store metadata
+    // Store payment metadata for tracking
     const paymentMetadata = {
       orderReference: orderReference,
       originalAmount: paymentData.amount,
@@ -405,17 +151,18 @@ export const createManualPaymentWithExistingCollection = (paymentData, existingC
       },
       orderItems: paymentData.orderItems || [],
       timestamp: new Date().toISOString(),
-      paymentProvider: 'PayRight Malaysia - Existing Collection',
-      collectionUuid: existingCollectionId,
+      paymentProvider: 'PayRight Malaysia - Simple Manual',
+      collectionUuid: workingCollectionId,
       paymentUrl: finalPaymentUrl,
       status: 'pending',
-      paymentMethod: 'manual_collection_existing'
+      paymentMethod: 'simple_manual_collection'
     };
     
+    // Store in localStorage for tracking
     localStorage.setItem(`manual_payment_${orderReference}`, JSON.stringify(paymentMetadata));
     
-    console.log('Manual payment with existing collection created:', {
-      collectionId: existingCollectionId,
+    console.log('Simple payment URL created:', {
+      collectionId: workingCollectionId,
       paymentUrl: finalPaymentUrl,
       orderReference,
       amountInMYR
@@ -424,24 +171,38 @@ export const createManualPaymentWithExistingCollection = (paymentData, existingC
     return {
       success: true,
       paymentUrl: finalPaymentUrl,
-      collectionUuid: existingCollectionId,
+      collectionUuid: workingCollectionId,
       orderReference: orderReference,
       amountInMYR: amountInMYR,
-      message: 'Manual payment page created with existing collection.',
+      message: 'Simple payment URL created successfully',
       metadata: paymentMetadata
     };
     
   } catch (error) {
-    console.error('Manual Payment with Existing Collection Error:', error);
+    console.error('Simple Payment URL Creation Error:', error);
     return {
       success: false,
-      error: 'Failed to create manual payment page: ' + error.message
+      error: 'Failed to create simple payment URL: ' + error.message,
+      debug: {
+        exception: error.message,
+        stack: error.stack
+      }
     };
   }
 };
 
 /**
- * Validate payment data
+ * Main payment page creation function - uses simple approach
+ */
+export const createPaymentPage = (paymentData) => {
+  console.log('=== CreatePaymentPage - Using Simple Approach ===');
+  
+  // Use simple approach (no API calls, just URL generation)
+  return createSimplePaymentUrl(paymentData);
+};
+
+/**
+ * Validate payment data before processing
  */
 export const validatePaymentData = (paymentData) => {
   const errors = [];
@@ -472,45 +233,6 @@ export const validatePaymentData = (paymentData) => {
     isValid: errors.length === 0,
     errors: errors
   };
-};
-
-/**
- * Get payment by order reference
- */
-export const getPaymentByReference = (orderReference) => {
-  try {
-    const paymentData = localStorage.getItem(`manual_payment_${orderReference}`);
-    if (paymentData) {
-      return {
-        success: true,
-        payment: JSON.parse(paymentData)
-      };
-    }
-    
-    return {
-      success: false,
-      error: 'Payment not found'
-    };
-  } catch (error) {
-    console.error('Error getting payment by reference:', error);
-    return {
-      success: false,
-      error: 'Failed to retrieve payment'
-    };
-  }
-};
-
-// Export configuration
-export const PAYMENT_CONFIG = {
-  supportedCurrencies: Object.keys(CURRENCY_TO_MYR_RATES),
-  baseCurrency: 'MYR (RM)',
-  conversionRates: CURRENCY_TO_MYR_RATES,
-  config: PAYRIGHT_CONFIG,
-  provider: 'PayRight Malaysia - Manual Collection',
-  environment: process.env.NODE_ENV || 'development',
-  version: '3.0.0',
-  paymentMethod: 'manual_hosted_page',
-  note: 'Users redirected to PayRight hosted payment page for payment method selection'
 };
 
 /**
@@ -607,9 +329,30 @@ export const checkPaymentStatus = async (orderReference) => {
 };
 
 /**
- * Legacy function name mapping for backward compatibility
+ * Get payment by order reference
  */
-export const createPaymentPage = createManualPaymentPage;
+export const getPaymentByReference = (orderReference) => {
+  try {
+    const paymentData = localStorage.getItem(`manual_payment_${orderReference}`);
+    if (paymentData) {
+      return {
+        success: true,
+        payment: JSON.parse(paymentData)
+      };
+    }
+    
+    return {
+      success: false,
+      error: 'Payment not found'
+    };
+  } catch (error) {
+    console.error('Error getting payment by reference:', error);
+    return {
+      success: false,
+      error: 'Failed to retrieve payment'
+    };
+  }
+};
 
 /**
  * Clear old payments from localStorage
@@ -653,12 +396,23 @@ export const clearOldPayments = (daysOld = 30) => {
   }
 };
 
+// Export configuration
+export const PAYMENT_CONFIG = {
+  supportedCurrencies: Object.keys(CURRENCY_TO_MYR_RATES),
+  baseCurrency: 'MYR (RM)',
+  conversionRates: CURRENCY_TO_MYR_RATES,
+  config: PAYRIGHT_CONFIG,
+  provider: 'PayRight Malaysia - Manual Collection',
+  environment: process.env.NODE_ENV || 'development',
+  version: '3.0.0',
+  paymentMethod: 'manual_hosted_page',
+  note: 'Users redirected to PayRight hosted payment page for payment method selection'
+};
+
 // Create the service object before exporting
 const PaymentService = {
   createPaymentPage,
-  createManualPaymentPage,
-  createManualPaymentWithExistingCollection,
-  createCollection,
+  createSimplePaymentUrl,
   validatePaymentData,
   getPaymentByReference,
   handlePaymentCallback,
@@ -668,5 +422,5 @@ const PaymentService = {
   PAYMENT_CONFIG
 };
 
-// Main export for the manual collection approach
+// Default export
 export default PaymentService;
