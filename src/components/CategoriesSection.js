@@ -53,7 +53,7 @@ const CategoriesSection = () => {
 
       <div className="flex flex-col items-center gap-0 px-5 py-5">
         <p className="w-full bg-gradient-to-r from-cyan-800 to-black bg-clip-text text-center text-[35px] font-semibold leading-[54px] text-transparent drop-shadow-md pt-[20px]">
-          {t('Featured_Market_Research_Reports')}
+          {t('Market_Research_by_Category')}
         </p>
         <hr className="my-5 h-[1.5px] w-24 border-none bg-cyan-800" />
       </div>

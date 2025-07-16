@@ -81,8 +81,7 @@ const PromotionalComponent = () => {
         const currencySymbol = getCurrencySymbol(currentCurrency);
 
         return (
-            <div className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col flex-shrink-0 w-full sm:w-80 h-auto sm:h-[280px] min-height-card
-">
+            <div className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col flex-shrink-0 w-full sm:w-80 h-auto sm:h-[280px] min-height-card">
                 {/* Content Area */}
                 <div className="p-4 flex-1 flex flex-col h-full">
                     <div className="flex-1">
@@ -107,8 +106,16 @@ const PromotionalComponent = () => {
                                     <div className="text-xl font-bold text-gray-900">
                                         {currencySymbol}{convertedPrice}
                                     </div>
-                                    <div className="text-sm text-gray-500 line-through">
-                                        {currencySymbol}{convertedOriginalPrice}
+                                    <div className="text-sm text-gray-500 relative">
+                                        <span className="relative">
+                                            {currencySymbol}{convertedOriginalPrice}
+                                            <span className="absolute inset-0 flex items-center justify-center">
+                                                <span className="w-full border-t border-gray-500" style={{
+                                                    borderTop: '2px solid #6B7280',
+                                                    transform: 'rotate(-8deg)'
+                                                }}></span>
+                                            </span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +125,6 @@ const PromotionalComponent = () => {
             </div>
         );
     };
-
 
     return (
         <section className="p-5 bg-gray-50 mt-10">
@@ -130,27 +136,21 @@ const PromotionalComponent = () => {
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto p-5 mb-5">
                         {t('limited')}
-
                     </p>
                 </div>
 
                 {/* Promotional Cards - Horizontal Scroll */}
-
-
                 <div className="mb-12">
                     <div className="overflow-x-auto pb-6">
                         <div className="responsive-promos px-4 mb-10">
                             {promotionalData.map((offer) => (
-                                <div className="w-full sm:w-64 flex-shrink-0">
-                                    <PromotionalCard key={offer.id} offer={offer} />
+                                <div className="w-full sm:w-64 flex-shrink-0" key={offer.id}>
+                                    <PromotionalCard offer={offer} />
                                 </div>
-
                             ))}
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
     );
