@@ -93,6 +93,30 @@
       }
     ]
   },
+   {
+    "id": "4804987_1",
+    "title": "Healthcare Fabrics - Global Strategic Business Report",
+    "date": "December 2024",
+    "type": "Report",
+    "pages": 565,
+    "price": "¥400,000",
+    "category": "healthcare",
+    "summary": "Comprehensive strategic business report covering healthcare fabrics market globally with detailed analysis and forecasts.",
+    "content": [
+      "Global healthcare fabrics market analysis with strategic insights and business intelligence.",
+      "Market segmentation, competitive landscape, and growth opportunities in healthcare fabrics sector.",
+      "Regional analysis and key market drivers affecting the healthcare fabrics industry."
+    ],
+    "licenseOptions": [
+      {
+        "license": "Single User License PDF And Excel",
+        "price": {
+          "USD": 212.12
+        }
+      }
+     
+    ]
+  },
   {
     "id": "5302560",
     "title": "Healthcare Staffing - Global Strategic Business Report",
@@ -159,6 +183,30 @@
         "license": "Enterprise License PDF And Excel",
         "price": {
           "USD": 420
+        }
+      }
+    ]
+  },
+
+   {
+    "id": "5941151_1",
+    "title": "Valeo 2024 United States Healthcare Law Firm Hourly Rate Report",
+    "date": "December 2024",
+    "type": "Report",
+    "pages": 606,
+    "price": "¥50,000",
+    "category": "healthcare",
+    "summary": "Comprehensive analysis of hourly rates for healthcare law firms in the United States for 2024.",
+    "content": [
+      "Detailed breakdown of hourly rates across different healthcare law practice areas.",
+      "Regional variations in healthcare law firm billing rates and market trends.",
+      "Comparative analysis of law firm sizes and their impact on hourly rate structures."
+    ],
+    "licenseOptions": [
+      {
+        "license": "Single User License PDF And Excel",
+        "price": {
+          "USD": 212.12
         }
       }
     ]
@@ -1126,6 +1174,32 @@
           "JPY": 100000
         }
       }
+    ]
+  },
+
+    {
+    "id": "5645019_1",
+    "title": "Wire and Cable Report Ed 6 2024",
+    "date": "September 2024",
+    "type": "Report",
+    "pages": 232,
+    "category": "industrial",
+    "summary": "This report surveys the metallic wire and cable market, sizing and forecasting demand for insulated power cable, bare power conductors, metallic communications cable and low voltage cable used in utility networks and industry, auto and OEM producers.",
+    "content": [
+      "The report sizes and forecasts the market for metallic electricity and communications cable and conductors, specifically for insulated power cable, bare power conductors, metallic communications cable, building wire, winding or magnet wire, auto wire and harnesses and LV energy cable.",
+      "Comprehensive analysis covers data analysed by twelve cable and conductor categories, classified by type, application and material - copper, aluminium and steel, with market analysis across 37 countries and 7 regions from 2023 to 2028.",
+      "Each country and region is analysed by production imports, exports and demand, with comprehensive outline of 34 leading cable companies, ranking of companies in each market, and global market shares of top 50 companies.",
+      "The report includes outlines of three subsea sectors (interconnectors, offshore wind and OGP), country analysis of underground cable penetration, technical descriptions of conductor and cable types, applications, and insulation technology.",
+      "Special focus areas include superconductor industry commercialization, railway electrification penetration, cable markets and technology, with PDF report containing market statistics and Excel database providing expanded statistical analysis of tonnage and value demand."
+    ],
+    "licenseOptions": [
+      {
+        "type": "Single User License PDF",
+        "price": {
+          "JPY": 212.12
+        }
+      }
+    
     ]
   },
   {

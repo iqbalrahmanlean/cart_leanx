@@ -6,15 +6,14 @@ import promotionalData from '../data/promotional-offers.json';
 
 const PromotionalComponent = () => {
     const { t, i18n } = useTranslation();
-    // Removed unused state variables
     const [currentCurrency, setCurrentCurrency] = useState('USD ($)');
 
     // Currency conversion rates (JPY is base in your data)
     const currencyRates = {
-        'USD ($)': 0.007, // 1 JPY = 0.007 USD
-        'JPY (¥)': 1,     // Base currency
-        'EUR (€)': 0.006, // 1 JPY = 0.006 EUR
-        'KRW (₩)': 9.2    // 1 JPY = 9.2 KRW
+        'USD ($)': 0.007,
+        'JPY (¥)': 1,
+        'EUR (€)': 0.006,
+        'KRW (₩)': 9.2
     };
 
     // Get currency symbol for display
@@ -28,7 +27,7 @@ const PromotionalComponent = () => {
         return symbols[currency] || '$';
     };
 
-    // Extract numeric value from price string (e.g., "¥12,000" -> 12000)
+    // Extract numeric value from price string
     const parsePrice = (priceString) => {
         if (!priceString) return 0;
         return parseFloat(priceString.replace(/[¥,$]/g, '').replace(/,/g, ''));
@@ -81,42 +80,32 @@ const PromotionalComponent = () => {
         const currencySymbol = getCurrencySymbol(currentCurrency);
 
         return (
-            <div className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col flex-shrink-0 w-full sm:w-80 h-auto sm:h-[280px] min-height-card">
-                {/* Content Area */}
-                <div className="p-4 flex-1 flex flex-col h-full">
-                    <div className="flex-1">
+            <div className="promo-card">
+                <div className="card-content">
+                    <div className="card-body">
                         <Link to={`/report/${offer.category}/${offer.id}`}>
-                            <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-3 group-hover:text-green-600 transition-colors min-h-[84px]">
+                            <h3 className="card-title">
                                 {offer.title}
                             </h3>
                         </Link>
 
-                        <div className="text-sm text-gray-600 mb-3">
-                            <div className="mb-1">{offer.date}</div>
-                            <div className="text-gray-500">{offer.type}</div>
+                        <div className="card-meta">
+                            <div className="card-date">{offer.date}</div>
+                            <div className="card-type">{offer.type}</div>
                         </div>
                     </div>
 
-                    {/* Footer with price and button */}
-                    <div className="mt-auto pt-4 border-t border-gray-100">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <div className="text-sm text-gray-500">Special Price</div>
-                                <div className="flex items-center space-x-2">
-                                    <div className="text-xl font-bold text-gray-900">
-                                        {currencySymbol}{convertedPrice}
-                                    </div>
-                                    <div className="text-sm text-gray-500 relative">
-                                        <span className="relative">
-                                            {currencySymbol}{convertedOriginalPrice}
-                                            <span className="absolute inset-0 flex items-center justify-center">
-                                                <span className="w-full border-t border-gray-500" style={{
-                                                    borderTop: '2px solid #6B7280',
-                                                    transform: 'rotate(-8deg)'
-                                                }}></span>
-                                            </span>
-                                        </span>
-                                    </div>
+                    <div className="card-footer">
+                        <div className="price-section">
+                            <div className="price-label">Special Price</div>
+                            <div className="price-container">
+                                <div className="current-price">
+                                    {currencySymbol}{convertedPrice}
+                                </div>
+                                <div className="original-price">
+                                    <span className="strikethrough">
+                                        {currencySymbol}{convertedOriginalPrice}
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -127,28 +116,221 @@ const PromotionalComponent = () => {
     };
 
     return (
-        <section className="p-5 bg-gray-50 mt-10">
-            <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-[35px] mobile:text-[28px] font-semibold text-center bg-gradient-to-r from-cyan-800 to-black bg-clip-text text-transparent drop-shadow-md leading-tight mb-10">
+        <section className="promotional-section">
+            <style jsx>{`
+                .promotional-section {
+                    padding: 20px;
+                    background-color: #f9fafb;
+                    margin-top: 40px;
+                }
+                
+                .section-container {
+                    max-width: 100%;
+                    margin: 0 auto;
+                    padding: 0 16px;
+                }
+                
+                .section-header {
+                    text-align: center;
+                    margin-bottom: 48px;
+                }
+                
+                .section-title {
+                    font-size: 35px;
+                    font-weight: 600;
+                    background: linear-gradient(to right, #155e75, #000000);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    line-height: 1.2;
+                    margin-bottom: 40px;
+                }
+                
+                .section-subtitle {
+                    font-size: 20px;
+                    color: #4b5563;
+                    max-width: 768px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                }
+                
+                .cards-container {
+                    margin-bottom: 48px;
+                }
+                
+                .cards-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 24px;
+                    padding: 0 16px;
+                }
+                
+                .promo-card {
+                    background: white;
+                    border-radius: 8px;
+                    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+                    border: 1px solid #e5e7eb;
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                    display: flex;
+                    flex-direction: column;
+                    height: 320px;
+                }
+                
+                .promo-card:hover {
+                    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+                }
+                
+                .card-content {
+                    padding: 16px;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                
+                .card-body {
+                    flex: 1;
+                }
+                
+                .card-title {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #111827;
+                    margin-bottom: 8px;
+                    line-height: 1.4;
+                    min-height: 60px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+                
+                .card-title:hover {
+                    color: #059669;
+                }
+                
+                .card-meta {
+                    font-size: 12px;
+                    color: #4b5563;
+                    margin-bottom: 12px;
+                }
+                
+                .card-date {
+                    margin-bottom: 4px;
+                }
+                
+                .card-type {
+                    color: #6b7280;
+                }
+                
+                .card-footer {
+                    margin-top: auto;
+                    padding-top: 12px;
+                    border-top: 1px solid #f3f4f6;
+                }
+                
+                .price-section {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                
+                .price-label {
+                    font-size: 12px;
+                    color: #6b7280;
+                }
+                
+                .price-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                
+                .current-price {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #111827;
+                }
+                
+                .original-price {
+                    font-size: 12px;
+                    color: #6b7280;
+                }
+                
+                .strikethrough {
+                    position: relative;
+                }
+                
+                .strikethrough::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                    background-color: #6b7280;
+                    transform: rotate(-8deg);
+                }
+                
+                /* Responsive Design */
+                @media (max-width: 1280px) {
+                    .cards-grid {
+                        grid-template-columns: repeat(4, 1fr);
+                    }
+                }
+                
+                @media (max-width: 1024px) {
+                    .cards-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    .cards-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 16px;
+                    }
+                    
+                    .section-title {
+                        font-size: 28px;
+                    }
+                    
+                    .section-subtitle {
+                        font-size: 18px;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .cards-grid {
+                        grid-template-columns: 1fr;
+                    }
+                    
+                    .promo-card {
+                        height: auto;
+                        min-height: 280px;
+                    }
+                }
+            `}</style>
+            
+            <div className="section-container">
+                <div className="section-header">
+                    <h2 className="section-title">
                         {t('Special_Promotional_Offers')}
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto p-5 mb-5">
+                    <p className="section-subtitle">
                         {t('limited')}
                     </p>
                 </div>
 
-                {/* Promotional Cards - Horizontal Scroll */}
-                <div className="mb-12">
-                    <div className="overflow-x-auto pb-6">
-                        <div className="responsive-promos px-4 mb-10">
-                            {promotionalData.map((offer) => (
-                                <div className="w-full sm:w-64 flex-shrink-0" key={offer.id}>
-                                    <PromotionalCard offer={offer} />
-                                </div>
-                            ))}
-                        </div>
+                <div className="cards-container">
+                    <div className="cards-grid">
+                        {promotionalData.map((offer) => (
+                            <PromotionalCard key={offer.id} offer={offer} />
+                        ))}
                     </div>
                 </div>
             </div>

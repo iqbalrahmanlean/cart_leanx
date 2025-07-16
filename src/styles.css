@@ -2359,15 +2359,17 @@ input {
     border-radius: .5rem;
 }
 
-/* styles.css */
+
 .responsive-promos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     /* Default: one card per row (mobile) */
     gap: 1rem;
 
 
 }
+
+
 
 .min-height-card{
     min-height: 232px;
@@ -2384,3 +2386,4 @@ input {
 
 
 }
+

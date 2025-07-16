@@ -83,5 +83,57 @@
     "features": ["All 10,000+ Reports", "Monthly Updates", "Priority Support", "Custom Analysis", "Data Export Tools", "API Access"],
     "bgGradient": "from-yellow-500 to-orange-600",
     "popular": true
+  },
+   {
+    "id": "4804987_1",
+    "title": "Healthcare Fabrics - Global Strategic Business Report",
+    "date": "December 2024",
+    "type": "All Access",
+    "pages": 565,
+    "price": "¥60,606", 
+    "originalPrice": "¥325,800",
+    "discount": "94.23%",
+    "category": "promotional",
+    "badge": "🏆 Ultimate",
+    "timeLeft": "Today Only",
+    "description": "Healthcare Fabrics - Global Strategic Business Report",
+    "features": ["All 10,000+ Reports", "Monthly Updates", "Priority Support", "Custom Analysis", "Data Export Tools", "API Access"],
+    "bgGradient": "from-yellow-500 to-orange-600",
+    "popular": true
+  },
+  {
+    "id": "5941151_1",
+    "title": "Valeo 2024 United States Healthcare Law Firm Hourly Rate Report",
+    "date": "December 2024",
+    "type": "All Access",
+    "pages": 606,
+    "price": "¥30,303", 
+    "originalPrice": "¥325,800",
+    "discount": "94.23%",
+    "category": "promotional",
+    "badge": "🏆 Ultimate",
+    "timeLeft": "Today Only",
+    "description": "Valeo 2024 United States Healthcare Law Firm Hourly Rate Report",
+    "features": ["All 10,000+ Reports", "Monthly Updates", "Priority Support", "Custom Analysis", "Data Export Tools", "API Access"],
+    "bgGradient": "from-yellow-500 to-orange-600",
+    "popular": true
+  },
+  {
+    "id": "5645019_1",
+    "title": "Wire and Cable Report Ed 6 2024",
+    "date": "December 2024",
+    "type": "All Access",
+    "pages": 232,
+    "price": "¥30,303", 
+    "originalPrice": "¥325,800",
+    "discount": "94.23%",
+    "category": "promotional",
+    "badge": "🏆 Ultimate",
+    "timeLeft": "Today Only",
+    "description": "Wire and Cable Report Ed 6 2024",
+    "features": ["All 10,000+ Reports", "Monthly Updates", "Priority Support", "Custom Analysis", "Data Export Tools", "API Access"],
+    "bgGradient": "from-yellow-500 to-orange-600",
+    "popular": true
   }
+ 
 ]
