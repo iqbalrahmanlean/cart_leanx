@@ -180,7 +180,7 @@ const Header = () => {
                 <div className="flex h-16 items-center justify-between mobile:h-full">
                     <div className="flex items-center space-x-2 mobile:space-x-1">
                         <Link to="/">
-                            <img src="/twopip.svg" alt="logo" className="h-6 w-6 rounded-full cursor-pointer mobile:h-5 mobile:w-5" />
+                            <img src="/logo.jpeg" alt="logo" className="h-6 w-6 rounded-full cursor-pointer mobile:h-5 mobile:w-5" />
                         </Link>
                         <h1 className="cursor-pointer text-lg font-semibold mobile:text-sm mobile:truncate mobile:max-w-20">
                             {t('twopip_research')}

@@ -12,6 +12,10 @@ import Footer from './components/Footer';
 import CartPage from './components/CartPage';
 import HealthcareReportsPage from './components/HealthcareReportsPage'; 
 import ReportDetailPage from './components/ReportDetailPage'; 
+import PrivacyPolicyPage from './components/PrivacyPolicyPage';
+import RefundPolicyPage from './components/RefundPolicyPage';
+import TermsConditionsPage from './components/TermsConditionsPage';
+import ScrollToTop from './components/ScrollToTop';
 import './styles.css';
 import './i18n';
 import PaymentSuccessPage from './components/PaymentSuccessPage';
@@ -61,6 +65,9 @@ function AppContent() {
           <Route path="/" element={<HomePage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/payment-success" element={<PaymentSuccessPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/refund-policy" element={<RefundPolicyPage />} />
+          <Route path="/terms-conditions" element={<TermsConditionsPage />} />
           
           {/* Category List Pages */}
           <Route path="/report/healthcare" element={<HealthcareReportsPage />} />
@@ -97,6 +104,7 @@ function AppContent() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppContent />
     </Router>
   );

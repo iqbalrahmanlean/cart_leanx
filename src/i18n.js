@@ -14,7 +14,7 @@ const resources = {
 
 
 
-      "twopip_research": "Twopip Research",
+      "twopip_research": "Powered by Payright",
       "global_marketplace": "Global Market Research Marketplace",
       "english": "English",
       "cart": "Cart",
@@ -129,7 +129,8 @@ const resources = {
   ja: {
     translation: {
       // Header
-      "twopip_research": "Twopip Research",
+      "twopip_research": "Powered by Payright",
+
       "global_marketplace": "グローバル市場調査マーケットプレイス",
       "english": "英語",
       "cart": "カート",
@@ -244,7 +245,8 @@ const resources = {
     translation: {
       // Header
       "contact_us" : "お問い合わせ",
-      "twopip_research": "Twopip Research",
+      "twopip_research": "Powered by Payright",
+
       "global_marketplace": "글로벌 시장 조사 마켓플레이스",
       "english": "영어",
       "cart": "장바구니",
