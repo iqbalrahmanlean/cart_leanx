@@ -2390,3 +2390,17 @@ input {
 .text-conditions{
     font-size: 24px !important;
 }
+
+.footer-link {
+  @apply text-gray-400 hover:text-white transition-colors duration-300;
+}
+
+.footer-link:not(:first-child)::before {
+  content: " | ";
+  margin: 0 0.25rem;
+  color: rgb(156 163 175); /* gray-400 */
+}
+
+.footer-link:hover {
+  @apply text-white;
+}

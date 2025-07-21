@@ -15,6 +15,7 @@ import ReportDetailPage from './components/ReportDetailPage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import RefundPolicyPage from './components/RefundPolicyPage';
 import TermsConditionsPage from './components/TermsConditionsPage';
+import AboutUsPage from './components/AboutUsPage';
 import ScrollToTop from './components/ScrollToTop';
 import './styles.css';
 import './i18n';
@@ -68,6 +69,7 @@ function AppContent() {
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/refund-policy" element={<RefundPolicyPage />} />
           <Route path="/terms-conditions" element={<TermsConditionsPage />} />
+          <Route path="/about" element={<AboutUsPage />} />
           
           {/* Category List Pages */}
           <Route path="/report/healthcare" element={<HealthcareReportsPage />} />
