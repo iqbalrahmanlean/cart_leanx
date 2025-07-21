@@ -11,6 +11,7 @@ const resources = {
       "contact_us" : "Contact Us",
       "Market_Research_by_Category": "Market Research by Category",
       'Featured_Market_Research_Reports' : "Featured Market Research Reports",
+      "about_us" : "About Us",
 
 
 
@@ -297,6 +298,7 @@ const resources = {
 
       
       // Reports Section
+      "about_us" : "私たちについて",
       "featured_reports": "주요 시장 조사 보고서",
       "discover_more": "더 많은 보고서 보기",
       
